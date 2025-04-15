@@ -1,4 +1,4 @@
-import { seniunijos } from '/region.js';
+import { seniunijos } from 'region.js';
 
 var map = L.map('map', {zoomControl: false}).setView([54.6872, 25.2797], 10);
 //L.marker([54.57944, 25.19589]).addTo(map);
