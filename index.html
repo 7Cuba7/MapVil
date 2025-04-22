@@ -20,16 +20,21 @@
     ></script>
   </head>
   <body>
+    <div id="logo">
+      <img src="herbas.svg.png" alt="Herbas" />
+    </div>
     <div id="top-toolbar">
       <div id="button-menu">
         <img src="icons8-menu.svg" alt="Menu" />
       </div>
       <div id="sideBar">
         <img src="close-x-svgrepo-com.svg" alt="Exit" />
+        <br />
         <label
           ><input type="radio" name="obj_Amount" value="population" />Gyventojų
           skaičius</label
         ><br />
+        <hr style="margin: 10px 0; border: 1px solid #ccc;">
 
         <button id="add1">+</button>
         <label
@@ -56,6 +61,16 @@
         >
         <button data-marker-location="kindergarten" id="kindergartenLocation">👶</button>
         <br />
+        <label id="preSchoolLabel"
+          ><input
+            type="radio"
+            name="obj_Amount"
+            class="location-checkbox"
+            value="preSchool"
+          />Ikimokyklinis ugdymas</label
+        >
+        <button data-marker-location="preSchool" id="preSchoolLocation">🐣</button>
+        <br />
         <label id="primarylLabel"
           ><input
             type="radio"
@@ -66,6 +81,26 @@
         >
         <button data-marker-location="primary" id="primarylLocation">👨‍🏫</button>
         <br />
+        <label id="schoolKindergartenLabel"
+          ><input
+            type="radio"
+            name="obj_Amount"
+            class="location-checkbox"
+            value="schoolKindergarten"
+          />Mokyklos-darželiai</label
+        >
+        <button data-marker-location="schoolKindergarten" id="schoolKindergartenLocation">🏡</button>
+        <br />
+        <label id="basicSchoolLabel"
+        ><input
+          type="radio"
+          name="obj_Amount"
+          class="location-checkbox"
+          value="basicSchool"
+        />Pagrindinis ugdymas</label
+      >
+      <button data-marker-location="basicSchool" id="basicSchoolLocation">🎒</button>
+      <br />
         <label id="progymnasiumLabel"
           ><input
             type="radio"
@@ -96,6 +131,26 @@
         >
         <button data-marker-location="artSchool" id="artSchoolLocation">🎨</button>
         <br />
+        <label id="sportSchoolLabel"
+          ><input
+            type="radio"
+            name="obj_Amount"
+            class="location-checkbox"
+            value="sportSchool"
+          />Sporto mokyklos</label
+        >
+        <button data-marker-location="sportSchool" id="sportSchoolLocation">🏃‍♂️</button>
+        <br />
+        <label id="supportSchoolLabel"
+          ><input
+            type="radio"
+            name="obj_Amount"
+            class="location-checkbox"
+            value="supportSchool"
+          />Švietimo pagalbos įstaiga</label
+        >
+        <button data-marker-location="supportSchool" id="supportSchoolLocation">🤝</button>
+        <br />
         <label id="vocationalSchoolLabel"
           ><input
             type="radio"
@@ -105,8 +160,22 @@
           />Profesinės mokyklos</label
         >
         <button data-marker-location="vocationalSchool" id="vocationalSchoolLocation">🛠️</button>
-        </div>
+        <br />
+        <br />
+          <div id="languageSelection" style="display: flex; align-items: center; gap: 10px;">
+            <label>Mokomoji kalba: </label>
 
+            <div>
+                <button  data-language="LT">Lietuvių</button>
+                <button  data-language="PL">Lenkų</button>
+                <button  data-language="RU">Rusų</button>
+            </div>
+
+          </div>
+        </div>
+        
+        <hr style="margin: 10px 0; border: 1px solid #ccc;">
+        
         <button id="add2">+</button>
         <label
           ><input type="radio" name="obj_Amount" value="culture" />Kultūra</label
@@ -129,11 +198,11 @@
             class="location-checkbox"
             value="library"
           />Bibliotekos</label
-        >
-        <button data-marker-location="library" id="libraryLocation">📚</button>
-      </div>
-
-        <button id="clearButton">Clear Selection</button>
+          >
+          <button data-marker-location="library" id="libraryLocation">📚</button>
+        </div>
+        <hr style="margin: 10px 0; border: 1px solid #ccc;">
+        <button id="clearButton">Pašalinti pasirinkimus</button>
       </div>
     </div>
     <div id="map"></div>
