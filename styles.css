@@ -17,6 +17,15 @@ html, body {
   box-sizing: border-box; 
 }
 
+#logo img{
+  width: 5%;
+  height: 5%;
+  box-sizing: border-box; 
+  position: absolute;
+  z-index: 1000;
+  object-fit: contain;
+}
+
 #button-menu{
   position: absolute;
   right: 10px; 
@@ -96,5 +105,12 @@ html, body {
 [data-marker-location].active {
   background-color: #4CAF50; /* Green color when active */
   color: white;
+}
+
+button[data-language].active {
+  /* Active state styles */
+  background-color: #4CAF50;  /* Green color */
+  color: white;
+  border-color: #4CAF50;
 }
 
