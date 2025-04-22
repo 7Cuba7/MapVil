@@ -13,38 +13,66 @@ export var seniunijos = {
             {
               "title": "Pagirių vaikų darželis-lopšelis „Pelėdžiukas“",
               "coordinates": [25.193619,54.576605],
-              "language": "LT"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             },
             {
               "title": "Vilniaus r. Vaidotų lopšelis-darželis „Margaspalvis aitvarėlis“",
               "coordinates": [25.182644, 54.602024],
-              "language": "LT/PL"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+
             }
           ],
-          "kindergarten": [
+          "kindergarten": [],
+          "preSchool": [],
+          "primary": [],
+          "schoolKindergarten": [],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Pagirių gimnazijos Keturiasdešimt Totorių pagrindinio ugdymo skyrius",
+              "coordinates": [25.1648,54.5610],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
           ],
-          "progymnasium":[
-            
-          ],
+          "progymnasium":[],
           "gymnasium": [
             {
               "title": "Pagirių gimnazija",
               "coordinates": [25.195881, 54.579594],
-              "language": "LT"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "artSchool":[
             {
               "title": "Pagirių meno mokykla",
               "coordinates": [25.199520803276286, 54.579626343951226],
-              "language": "LT"
+              "language": "LT/PL/RU",
+              "LT": true,
+              "PL": true,
+              "RU": true
             }
           ],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[
             {
               "title": "Vilniaus agroekologijos mokymo centras",
               "coordinates": [25.188872, 54.600762],
-              "language": "LT"
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ]
         },
@@ -70,7 +98,27 @@ export var seniunijos = {
             }
 
           ]
-        }
+        },
+        "healthSector": {   //AB „Pagirių šiltnamiai“ sveikatingumo kompleksas ant klaustuko
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Pagirių ambulatorija",
+              "coordinates": [25.1966,54.5810]
+            }
+          ],
+          "BpgOffice":[
+            {
+              "title": "Baltosios Vokės bendrosios praktikos gydytojo kabinetas",
+              "coordinates": [25.179714,54.602314]
+            }
+          ],
+          "familyDoctor":[
+            
+          ],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
+        },
       },
       "geometry": 
       {
@@ -1847,31 +1895,90 @@ export var seniunijos = {
             {
               "title": "Avižienių vaikų lopšelis-darželis",
               "coordinates": [25.184930, 54.763708],
-              "language": "LT/PL"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
-          "kindergarten": [],
-          "progymnasium":[],
+          "kindergarten": [
+            {
+              "title": "MB „Pasakų namukas“",
+              "coordinates": [25.186201,54.761004],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "Viešoji įstaiga „Gandrų lizdas“",
+              "coordinates": [25.239223,54.807491],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "VšĮ „Pasakų namukas plius“",
+              "coordinates": [25.186012,54.761705],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+
+
+          ],
+          "preschool": [],
+          "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
+          "progymnasium":[
+            {
+              "title": "Bukiškio progimnazija",
+              "coordinates": [25.2082,54.7626],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "gymnasium": [
             {
-              "title": "Avižienių gimnazija",
+              "title": "Vilniaus r. Avižienių gimnazija",
               "coordinates": [25.18866, 54.76248],
-              "language": "LT/PL"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[
             {
               "title": "Vilniaus automechanikos ir verslo mokyklos Bukiškio skyrius",
               "coordinates": [25.203152,54.764763],
-              "language": "LT"
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ]
         },
         "culturalSector": {
           "culturalCenter": [],
           "library": []
-        }
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
+      },
       },
       "geometry": {
         "type": "Polygon",
@@ -2965,33 +3072,45 @@ export var seniunijos = {
         "population": 1234,
         "education": {  
           "nurseryKindergarten": [
-            {
-            }
           ],
-          "kindergarten": [
+          "kindergarten": [],
+          "preSchool": [
             {
               "title": "Vilniaus r. Bezdonių Julijaus Slovackio gimnazijos Bezdonių ikimokyklinio ugdymo skyrius",
               "coordinates": [25.515361,54.804813],
-              "language": "LT/PL"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "primary":[],
-          "progymnasium":[
+          "schoolKindergarten": [],
+          "basicSchool": [
             {
-              "title": "„Saulėtekio“ pagrindinė mokykla", //ant klaustuko
+              "title": "„Saulėtekio“ pagrindinė mokykla", 
               "coordinates": [25.516053, 54.800846],
-              "language": "LT"
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ],
+          "progymnasium":[],
           "gymnasium": [
             {
 
               "title": "Bezdonių Julijaus Slovackio gimnazija",
               "coordinates": [25.514669, 54.802885],
-              "language": "LT/PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -4101,22 +4220,34 @@ export var seniunijos = {
         "population": 869,
         "education": {  
           "nurseryKindergarten": [],
-          "kindergarten": [
+          "kindergarten": [],
+          "progymnasium":[],
+          "preSchool": [
             {
-              "title": "Buivydžių ikimokyklinio ugdymo skyrius",
+              "title": "Vilniaus r. Buivydžių Tadeušo Konvickio gimnazijos Buivydžių ikimokyklinio ugdymo skyrius",
               "coordinates": [25.730746, 54.835724],
-              "language": "PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
-          "progymnasium":[],
+          "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "gymnasium": [
             {
               "title": "Vilniaus r. Buivydžių Tadeušo Konvickio gimnazija",
               "coordinates": [25.732738, 54.836575],
-              "language": "PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -6722,19 +6853,31 @@ export var seniunijos = {
             {
               "title": "Privatus vaikų darželis „Terlius“ ",
               "coordinates": [24.942550,54.837822],
-              "language": "LT"
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Avižienių gimnazijos Dūkštų pagrindinio ugdymo skyrius", 
+              "coordinates": [24.971892,54.823920],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
           "gymnasium": [
-            {
-              "title": "Vilniaus r. Avižienių gimnazijos Dūkštų pagrindinio ugdymo skyrius", //ant klaustuko
-              "coordinates": [24.971892,54.823920],
-              "language": "PL"
-            }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -9163,30 +9306,47 @@ export var seniunijos = {
             {
               "title": "Valčiūnų vaikų lopšelis-darželis",
               "coordinates": [25.265556, 54.564856],
-              "language": "LT"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "kindergarten": [],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "progymnasium":[],
           "gymnasium": [
             {
               "title": "Šv. Uršulės Leduchovskos gimnazija",
               "coordinates": [25.259661,54.578775],
-              "language": "LT" //ant klaustuko
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             },
             {
               "title": "Vilniaus r. Valčiūnų gimnazija",
               "coordinates": [25.262375,54.559463],
-              "language": "LT" //ant klaustuko
+              "language": "RU",
+              "LT": false,
+              "PL": false,
+              "RU": true
             },
             {
               "title": "Juodšilių „Šilo“ gimnazija",
               "coordinates": [25.269188, 54.578187],
-              "language": "LT" 
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -9836,36 +9996,57 @@ export var seniunijos = {
             {
               "title": "Kalvelių vaikų lopšelis-darželis",
               "coordinates": [25.692004,54.635782],
-              "language": "LT" //ant klaustuko
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "kindergarten": [],
+          "preSchool": [],
           "primary":[],
-          "progymnasium":[
+          "schoolKindergarten": [],
+          "basicSchool": [
             {
               "title": "Šumsko pagrindinė mokykla",
               "coordinates": [25.722053,54.610514],
-              "language": "LT" //ant klaustuko
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             },
             {
               "title": "Pakenės Č. Milošo pagrindinė mokykla",
               "coordinates": [25.596249,54.648040],
-              "language": "LT" //ant klaustuko
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
+          ],
+          "progymnasium":[
           ],
           "gymnasium": [
             {
               "title": "Kalvelių „Aušros“ gimnazija",
               "coordinates": [25.690627,54.635821],
-              "language": "LT" //ant klaustuko
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             },
             {
               "title": "Kalvelių Stanislavo Moniuškos gimnazija",
               "coordinates": [25.689479, 54.635648],
-              "language": "LT" //ant klaustuko
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -16022,25 +16203,48 @@ export var seniunijos = {
             {
               "title": "Vilniaus r. Lavoriškių vaikų lopšelis-darželis",
               "coordinates": [25.638903, 54.713469],
-              "language": "PL" 
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
-          "primary":[],
-          "progymnasium":[
+          "preSchool": [
             {
               "title": "Lavoriškių Stepono Batoro gimnazijos skyrius Mostiškių mokykla-daugiafunkcis centras",
               "coordinates": [25.667450,54.771328],
-              "language": "PL" 
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
+          ],
+          "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
+          "progymnasium":[
           ],
           "gymnasium": [
             {
               "title": "Vilniaus r. Lavoriškių Stepono Batoro gimnazija",
               "coordinates": [25.640041, 54.713181],
-              "language": "PL" 
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "Lavoriškių gimnazija",
+              "coordinates": [25.634689,54.704954],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -17530,38 +17734,59 @@ export var seniunijos = {
             {
               "title": "Maišiagalos vaikų lopšelis-darželis",
               "coordinates": [25.060088,54.870959],
-              "language": "PL"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "kindergarten": [
-            {
-              "title": "Riešės šv. Faustinos Kovalskos pagrindinės mokyklos skyrius Karvio mokykla–daugiafunkcis centras",
-              "coordinates": [25.134267,54.871140],
-              "language": "PL"
-            }
           ],
+          "preSchool": [],
           "primary":[
             {
               "title": "Riešės šv. Faustinos Kovalskos pagrindinės mokyklos skyrius Karvio mokykla–daugiafunkcis centras",
               "coordinates": [25.134686, 54.871239],
-              "language": "PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
+          "schoolKindergarten": [
+            {
+              "title": "VšĮ „Melkio mokykla“",
+              "coordinates": [25.200480,54.869524],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "basicSchool": [],
           "progymnasium":[
           ],
           "gymnasium": [
             {
               "title": "Maišiagalos kun. Juzefo Obrembskio gimnazija",
               "coordinates": [25.069318,54.872778],
-              "language": "PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             },
             {
               "title": "Maišiagalos Lietuvos didžiojo kunigaikščio Algirdo gimnazija",
               "coordinates": [25.063781,54.868863],
-              "language": "LT" 
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -19024,33 +19249,51 @@ export var seniunijos = {
             {
               "title": "Marijampolio vaikų lopšelis-darželis",
               "coordinates": [25.325904,54.531992],
-              "language": "LT"
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
             }
           ],
           "kindergarten": [
           ],
+          "preSchool": [],
           "primary":[
             {
               "title": "Rudaminos Ferdinando Ruščico gimnazijos Marijampolio pradinio ugdymo skyrius",
               "coordinates": [25.322848, 54.532251],
-              "language": "PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
           ],
-          "progymnasium":[
+          "schoolKindergarten": [],
+          "basicSchool": [
             {
               "title": "Rudaminos Ferdinando Ruščico gimnazijos Rakonių pagrindinio ugdymo skyrius",
               "coordinates": [25.428827, 54.507738],
-              "language": "PL"
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
             }
+          ],
+          "progymnasium":[
           ],
           "gymnasium": [
             {
               "title": "Marijampolio Meilės Lukšienės gimnazija",
               "coordinates": [25.324054,54.532175],
-              "language": "LT"
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
             }
           ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -20985,16 +21228,41 @@ export var seniunijos = {
         "population": 1063,  // 2025m.
         "education": {  
           "nurseryKindergarten": [],
-          "kindergarten": [],
+          "kindergarten": [
+            {
+              "title": "Rukainių gimnazijos Medininkų skyrius", 
+              "coordinates": [25.650955,54.534999],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+            {
+              "title": "Medininkų kultūros centras",
+              "coordinates": [25.6536,54.5414]
+            }
+          ],
+          "library": [
+            {
+              "title": "Medininkų biblioteka",
+              "coordinates": [25.651456,54.536080]
+            }
+          ]
         }
       },
       "geometry": {
@@ -22629,12 +22897,51 @@ export var seniunijos = {
         "name": "Mickūnų seniūnija",
         "population": 6956,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Mickūnų vaikų lopšelis-darželis",
+              "coordinates": [25.514066,54.707457],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "Mickūnų vaikų lopšelis-darželis",
+              "coordinates": [25.513730,54.708180],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "kindergarten": [],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+              "title": "Vilniaus r. Egliškių šv. Jono Bosko gimnazija",
+              "coordinates": [25.425606,54.716322],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "Vilniaus r. Mickūnų gimnazija",
+              "coordinates": [25.51534,54.69859],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
@@ -23598,17 +23905,77 @@ export var seniunijos = {
         "name": "Nemenčinės seniūnija",
         "population": 4015,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Kabiškių vaikų lopšelis-darželis", 
+              "coordinates": [25.454903,54.876020],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "kindergarten": [],
+          "preSchool": [
+            {
+              "title": "Vilniaus r. Nemenčinės vaikų lopšelio-darželio „100 spalvų“ skyrius Rudausių daugiafunkcis centras", 
+              "coordinates": [25.573990,54.904109],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Eitminiškių pagrindinė mokykla", 
+              "coordinates": [25.386792,54.917215],
+              "language": "PL",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+                "title": "Eitminiškių gimnazija", 
+                "coordinates": [25.388432,54.920886],
+                "language": "LT",
+                "LT": true,
+                "PL": false,
+                "RU": false
+            }
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+           
+            {
+              "title": "Eitminiškių kultūros centras",
+              "coordinates": [25.387019,54.921726]
+            },
+          ],
+          "library": [
+            {
+              "title": "Eitminiškių biblioteka",
+              "coordinates": [25.387366,54.921645]
+            },
+            {
+              "title": "Rudausių biblioteka",
+              "coordinates": [25.570642,54.904559]
+            },
+            {
+              "title": "Kabiškių biblioteka",
+              "coordinates": [25.454847,54.877184]
+            }
+          ]
         }
       },
       "geometry": {
@@ -27372,17 +27739,97 @@ export var seniunijos = {
         "name": "Nemenčinės m. seniūnija",
         "population": 4641,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Nemenčinės vaikų lopšelis-darželis „100 spalvų“",
+              "coordinates": [25.471936,54.843968],
+              "language": "LT/PL/RU",
+              "LT": true,
+              "PL": true,
+              "RU": true
+            },
+            {
+              "title": "Vilniaus r. Nemenčinės vaikų lopšelis-darželis",
+              "coordinates": [25.470818,54.853559],
+              "language": "LT/PL/RU",
+              "LT": true,
+              "PL": true,
+              "RU": true
+            },
+          ],
           "kindergarten": [],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "progymnasium":[],
-          "gymnasium": [],
-          "artSchool":[],
+          "gymnasium": [
+            {
+              "title": "Vilniaus r. Nemenčinės Gedimino gimnazija",
+              "coordinates": [25.479579,54.849601],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "Vilniaus r. Nemenčinės Konstanto Parčevskio gimnazija",
+              "coordinates": [25.475758,54.847585],
+              "language": "PL/RU",
+              "LT": false,
+              "PL": true,
+              "RU": true
+            },
+          ],
+          "artSchool":[
+            {
+              "title": "Vilniaus r. Nemenčinės muzikos mokykla",
+              "coordinates": [25.471007,54.853843],
+              "language": "LT/PL/RU",
+              "LT": true,
+              "PL": true,
+              "RU": true
+            }
+          ],
+          "sportSchool": [
+            {
+              "title": "Vilniaus r. Nemenčinės sporto mokykla",
+              "coordinates": [25.458070,54.842758],
+              "language": "LT/PL/RU",
+              "LT": true,
+              "PL": true,
+              "RU": true
+            }
+          ],
+          "supportSchool": [
+            {
+              "title": "Vilniaus rajono pedagoginė psichologinė tarnyba",
+              "coordinates": [25.474231,54.848846],
+              "language": "none",
+              "LT": false,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+            {
+              "title": "Nemenčinės kultūros centras",
+              "coordinates": [25.464083,54.846406],
+            }
+          ],
+          "library": [
+            {
+              "title": "Nemenčinės miesto biblioteka",
+              "coordinates": [25.465038,54.846669],
+            },
+            {
+              "title": "Nemenčinės miesto vaikų biblioteka",
+              "coordinates": [25.463986,54.846409],
+            }
+          ]
         }
       },
       "geometry": {
@@ -28372,17 +28819,84 @@ export var seniunijos = {
         "name": "Nemėžio seniūnija",
         "population": 10476,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
-          "kindergarten": [],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Nemėžio vaikų lopšelis-darželis",
+              "coordinates": [25.351270,54.637078],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "kindergarten": [
+            {
+              "title": "VšĮ „Po Saule“",
+              "coordinates": [25.364340,54.615373],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [
+            {
+              "title": "Vilniaus r. Skaidiškių mokykla-darželis",
+              "coordinates": [25.385571,54.606405],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "basicSchool": [
+            {
+              "title": "VšĮ Vilniaus Valdorfo Atviroji mokykla",
+              "coordinates": [25.324757,54.640082],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+              "title": "Vilniaus r. Nemėžio šv. Rapolo Kalinausko gimnazija",
+              "coordinates": [25.357257,54.638267],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "VšĮ Uogų slėnio mokymosykla",
+              "coordinates": [25.364429,54.615088],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
           "culturalCenter": [],
-          "library": []
+          "library": [
+            {
+              "title": "Nemėžio biblioteka",
+              "coordinates": [25.356417,54.636975],
+            },
+            {
+              "title": "Skaidiškių biblioteka",
+              "coordinates": [25.385741,54.604832],
+            }
+          ]
         }
       },
       "geometry": {
@@ -28980,16 +29494,79 @@ export var seniunijos = {
         "name": "Paberžės seniūnija",
         "population": 3276,  // 2025m.
        "education": {  
-          "nurseryKindergarten": [],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Glitiškių vaikų lopšelis-darželis",
+              "coordinates": [25.231856,54.983600],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "kindergarten": [],
-          "primary":[],
+          "preSchool": [
+            {
+              "title": "Vilniaus r. Glitiškių vaikų lopšelio-darželio Anavilio ikimokyklinio ugdymo skyrius",
+              "coordinates": [25.223874,54.942432],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "primary":[
+            {
+              "title": "Vilniaus r. Paberžės šv. Stanislavo Kostkos gimnazijos Pikeliškių pradinio ugdymo skyrius (Paberžės seniūnija)",
+              "coordinates": [25.244855,54.883996],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "schoolKindergarten": [],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Paberžės šv. Stanislavo Kostkos gimnazijos skyrius Visalaukės mokykla-daugiafunkcis centras",
+              "coordinates": [25.341549,54.994736],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+              "title": "Vilniaus r. Paberžės „Verdenės“ gimnazija",
+              "coordinates": [25.235264,54.938539],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "Vilniaus r. Paberžės šv. Stanislavo Kostkos gimnazija",
+              "coordinates": [25.234107,54.939396],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
+          "culturalCenter": [
+            {
+              "title": "Glitiškių kultūros centras",
+              "coordinates": [25.221919,54.985206], //ant klausutko
+            }
+          ],
           "library": []
         }
       },
@@ -31437,1804 +32014,104 @@ export var seniunijos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Pagirių seniūnija",
-        "population": 7894,  // 2025m.
-        "education": {  
-          "nurseryKindergarten": [],
-          "kindergarten": [],
-          "primary":[],
-          "progymnasium":[],
-          "gymnasium": [],
-          "artSchool":[],
-          "vocationalSchool":[]
-        },
-        "culturalSector": {
-          "culturalCenter": [],
-          "library": []
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-      
-        "coordinates": [
-          [
-            [
-              25.1479203,
-              54.5032458
-            ],
-            [
-              25.1480718,
-              54.5028531
-            ],
-            [
-              25.1481498,
-              54.5024754
-            ],
-            [
-              25.1481688,
-              54.5015248
-            ],
-            [
-              25.1483173,
-              54.5011852
-            ],
-            [
-              25.1483849,
-              54.5008454
-            ],
-            [
-              25.1485807,
-              54.4999742
-            ],
-            [
-              25.1486206,
-              54.4993271
-            ],
-            [
-              25.1484066,
-              54.4988697
-            ],
-            [
-              25.1483463,
-              54.498345
-            ],
-            [
-              25.1478946,
-              54.4976336
-            ],
-            [
-              25.147875,
-              54.497253
-            ],
-            [
-              25.1477602,
-              54.4969262
-            ],
-            [
-              25.1476043,
-              54.4958404
-            ],
-            [
-              25.1474305,
-              54.4953097
-            ],
-            [
-              25.1473668,
-              54.4949072
-            ],
-            [
-              25.1472232,
-              54.4946295
-            ],
-            [
-              25.1469464,
-              54.4943183
-            ],
-            [
-              25.1465797,
-              54.4937722
-            ],
-            [
-              25.146461,
-              54.4935289
-            ],
-            [
-              25.1461969,
-              54.4929919
-            ],
-            [
-              25.1457883,
-              54.4926199
-            ],
-            [
-              25.1452127,
-              54.4921734
-            ],
-            [
-              25.1439782,
-              54.4889566
-            ],
-            [
-              25.1401527,
-              54.4867368
-            ],
-            [
-              25.1392569,
-              54.4849831
-            ],
-            [
-              25.138526,
-              54.4840881
-            ],
-            [
-              25.141536,
-              54.4840761
-            ],
-            [
-              25.1425162,
-              54.4824112
-            ],
-            [
-              25.1421603,
-              54.4811779
-            ],
-            [
-              25.1409459,
-              54.4796724
-            ],
-            [
-              25.140565,
-              54.4793576
-            ],
-            [
-              25.1403439,
-              54.4787138
-            ],
-            [
-              25.1402807,
-              54.4763967
-            ],
-            [
-              25.1391596,
-              54.4753649
-            ],
-            [
-              25.140034,
-              54.4753712
-            ],
-            [
-              25.1386019,
-              54.4737341
-            ],
-            [
-              25.1404216,
-              54.4731681
-            ],
-            [
-              25.1407957,
-              54.4730832
-            ],
-            [
-              25.142802,
-              54.4731237
-            ],
-            [
-              25.1442718,
-              54.4735103
-            ],
-            [
-              25.1465732,
-              54.4731393
-            ],
-            [
-              25.1463272,
-              54.4726784
-            ],
-            [
-              25.1462352,
-              54.4721449
-            ],
-            [
-              25.1462084,
-              54.4717989
-            ],
-            [
-              25.1474176,
-              54.4666767
-            ],
-            [
-              25.1477587,
-              54.4663651
-            ],
-            [
-              25.1489174,
-              54.4669949
-            ],
-            [
-              25.153048,
-              54.4685911
-            ],
-            [
-              25.1589601,
-              54.4745236
-            ],
-            [
-              25.1671524,
-              54.4803315
-            ],
-            [
-              25.1692271,
-              54.4813959
-            ],
-            [
-              25.1739317,
-              54.4820846
-            ],
-            [
-              25.1771611,
-              54.4831941
-            ],
-            [
-              25.1786221,
-              54.4834368
-            ],
-            [
-              25.1843709,
-              54.4844064
-            ],
-            [
-              25.1864402,
-              54.485499
-            ],
-            [
-              25.1866469,
-              54.4858875
-            ],
-            [
-              25.1870745,
-              54.4869056
-            ],
-            [
-              25.186919,
-              54.4871455
-            ],
-            [
-              25.1874282,
-              54.4877961
-            ],
-            [
-              25.1887321,
-              54.4911807
-            ],
-            [
-              25.1962381,
-              54.4982021
-            ],
-            [
-              25.2095443,
-              54.5047296
-            ],
-            [
-              25.2132122,
-              54.5071312
-            ],
-            [
-              25.2136552,
-              54.5068938
-            ],
-            [
-              25.2154282,
-              54.5061198
-            ],
-            [
-              25.2174344,
-              54.5052928
-            ],
-            [
-              25.2176759,
-              54.5052524
-            ],
-            [
-              25.2196183,
-              54.5041015
-            ],
-            [
-              25.2201292,
-              54.5037426
-            ],
-            [
-              25.2202769,
-              54.5040888
-            ],
-            [
-              25.221895,
-              54.5053489
-            ],
-            [
-              25.2247375,
-              54.5077125
-            ],
-            [
-              25.227122,
-              54.5091365
-            ],
-            [
-              25.234046,
-              54.5103765
-            ],
-            [
-              25.237703,
-              54.51011
-            ],
-            [
-              25.2390289,
-              54.5102746
-            ],
-            [
-              25.2415575,
-              54.5106805
-            ],
-            [
-              25.2411295,
-              54.5147195
-            ],
-            [
-              25.2404228,
-              54.5162427
-            ],
-            [
-              25.2402554,
-              54.5167576
-            ],
-            [
-              25.2409762,
-              54.5168702
-            ],
-            [
-              25.2408873,
-              54.5171557
-            ],
-            [
-              25.2407241,
-              54.5176798
-            ],
-            [
-              25.2400625,
-              54.5176744
-            ],
-            [
-              25.239251,
-              54.521531
-            ],
-            [
-              25.2396515,
-              54.524377
-            ],
-            [
-              25.241422,
-              54.527772
-            ],
-            [
-              25.2418665,
-              54.5284567
-            ],
-            [
-              25.24243,
-              54.5283058
-            ],
-            [
-              25.2429262,
-              54.5291245
-            ],
-            [
-              25.2424162,
-              54.5292258
-            ],
-            [
-              25.246961,
-              54.536209
-            ],
-            [
-              25.250876,
-              54.540551
-            ],
-            [
-              25.2505915,
-              54.54212
-            ],
-            [
-              25.2440565,
-              54.5424015
-            ],
-            [
-              25.2458485,
-              54.5466915
-            ],
-            [
-              25.2467795,
-              54.552021
-            ],
-            [
-              25.2473665,
-              54.553209
-            ],
-            [
-              25.2475655,
-              54.5552
-            ],
-            [
-              25.2484055,
-              54.5572535
-            ],
-            [
-              25.251339,
-              54.557035
-            ],
-            [
-              25.251273,
-              54.559367
-            ],
-            [
-              25.2508395,
-              54.5680505
-            ],
-            [
-              25.2478335,
-              54.572134
-            ],
-            [
-              25.2461254,
-              54.5734013
-            ],
-            [
-              25.2426682,
-              54.5758341
-            ],
-            [
-              25.2405887,
-              54.5746983
-            ],
-            [
-              25.2370007,
-              54.5747657
-            ],
-            [
-              25.2337203,
-              54.5765007
-            ],
-            [
-              25.2338457,
-              54.5822106
-            ],
-            [
-              25.230807,
-              54.5846803
-            ],
-            [
-              25.225178,
-              54.5877561
-            ],
-            [
-              25.2243822,
-              54.5879815
-            ],
-            [
-              25.221427,
-              54.588473
-            ],
-            [
-              25.216367,
-              54.5885224
-            ],
-            [
-              25.2140857,
-              54.5889774
-            ],
-            [
-              25.212121,
-              54.5875261
-            ],
-            [
-              25.2114558,
-              54.5878369
-            ],
-            [
-              25.2115953,
-              54.5888378
-            ],
-            [
-              25.2111858,
-              54.5893345
-            ],
-            [
-              25.2104902,
-              54.590249
-            ],
-            [
-              25.2087926,
-              54.5914853
-            ],
-            [
-              25.2022219,
-              54.5995951
-            ],
-            [
-              25.2007162,
-              54.6006479
-            ],
-            [
-              25.2003086,
-              54.600421
-            ],
-            [
-              25.1995683,
-              54.5997405
-            ],
-            [
-              25.1967788,
-              54.6006789
-            ],
-            [
-              25.1949594,
-              54.6020558
-            ],
-            [
-              25.1935219,
-              54.6014751
-            ],
-            [
-              25.1915055,
-              54.6023507
-            ],
-            [
-              25.1906123,
-              54.6014882
-            ],
-            [
-              25.1865487,
-              54.603025
-            ],
-            [
-              25.187562,
-              54.6034735
-            ],
-            [
-              25.1852265,
-              54.6044434
-            ],
-            [
-              25.1821646,
-              54.6055904
-            ],
-            [
-              25.1799774,
-              54.6052591
-            ],
-            [
-              25.1782715,
-              54.6061384
-            ],
-            [
-              25.17663,
-              54.6065454
-            ],
-            [
-              25.1758989,
-              54.6060314
-            ],
-            [
-              25.1733248,
-              54.6066919
-            ],
-            [
-              25.1711368,
-              54.6051541
-            ],
-            [
-              25.1708577,
-              54.605206
-            ],
-            [
-              25.163436,
-              54.600258
-            ],
-            [
-              25.1626262,
-              54.599871
-            ],
-            [
-              25.1628542,
-              54.599641
-            ],
-            [
-              25.1630124,
-              54.5995229
-            ],
-            [
-              25.1633128,
-              54.5993567
-            ],
-            [
-              25.1634872,
-              54.5993039
-            ],
-            [
-              25.1636454,
-              54.5992712
-            ],
-            [
-              25.1638117,
-              54.5992541
-            ],
-            [
-              25.1639888,
-              54.5992588
-            ],
-            [
-              25.1649222,
-              54.5993505
-            ],
-            [
-              25.1651072,
-              54.5993567
-            ],
-            [
-              25.1652119,
-              54.5993349
-            ],
-            [
-              25.1653084,
-              54.5992868
-            ],
-            [
-              25.1654291,
-              54.5991998
-            ],
-            [
-              25.1655149,
-              54.5990584
-            ],
-            [
-              25.16559,
-              54.5989247
-            ],
-            [
-              25.1657322,
-              54.5987352
-            ],
-            [
-              25.1658905,
-              54.598572
-            ],
-            [
-              25.1660782,
-              54.5984617
-            ],
-            [
-              25.1663196,
-              54.5983498
-            ],
-            [
-              25.1667246,
-              54.5981494
-            ],
-            [
-              25.16743,
-              54.5978868
-            ],
-            [
-              25.167658,
-              54.5978029
-            ],
-            [
-              25.1680255,
-              54.5977174
-            ],
-            [
-              25.1682025,
-              54.597677
-            ],
-            [
-              25.1684251,
-              54.5976602
-            ],
-            [
-              25.1685683,
-              54.5976695
-            ],
-            [
-              25.1687631,
-              54.597691
-            ],
-            [
-              25.16893,
-              54.5977152
-            ],
-            [
-              25.1696402,
-              54.5978868
-            ],
-            [
-              25.1698709,
-              54.5979567
-            ],
-            [
-              25.1700559,
-              54.5980313
-            ],
-            [
-              25.1703697,
-              54.5981727
-            ],
-            [
-              25.1706648,
-              54.598339
-            ],
-            [
-              25.1709518,
-              54.5984633
-            ],
-            [
-              25.1713997,
-              54.5986419
-            ],
-            [
-              25.1716036,
-              54.5986901
-            ],
-            [
-              25.171845,
-              54.598701
-            ],
-            [
-              25.172132,
-              54.5986901
-            ],
-            [
-              25.1724082,
-              54.5986823
-            ],
-            [
-              25.1725772,
-              54.598694
-            ],
-            [
-              25.1728575,
-              54.5987227
-            ],
-            [
-              25.1733552,
-              54.5987171
-            ],
-            [
-              25.1734901,
-              54.5987103
-            ],
-            [
-              25.1737078,
-              54.5986678
-            ],
-            [
-              25.1738808,
-              54.598614
-            ],
-            [
-              25.1741227,
-              54.598521
-            ],
-            [
-              25.1743931,
-              54.59837
-            ],
-            [
-              25.1745218,
-              54.5983087
-            ],
-            [
-              25.1746345,
-              54.5982729
-            ],
-            [
-              25.1747321,
-              54.5982574
-            ],
-            [
-              25.174819,
-              54.5982657
-            ],
-            [
-              25.1749148,
-              54.5982925
-            ],
-            [
-              25.1750421,
-              54.5983331
-            ],
-            [
-              25.1751548,
-              54.5983581
-            ],
-            [
-              25.1752145,
-              54.5983608
-            ],
-            [
-              25.1753104,
-              54.5983647
-            ],
-            [
-              25.1757348,
-              54.5983321
-            ],
-            [
-              25.1758476,
-              54.598329
-            ],
-            [
-              25.1759612,
-              54.5983192
-            ],
-            [
-              25.1760312,
-              54.598299
-            ],
-            [
-              25.1760787,
-              54.5982715
-            ],
-            [
-              25.1762361,
-              54.5981325
-            ],
-            [
-              25.1763061,
-              54.5980905
-            ],
-            [
-              25.1763711,
-              54.5980688
-            ],
-            [
-              25.1764861,
-              54.5980398
-            ],
-            [
-              25.1768199,
-              54.597991
-            ],
-            [
-              25.1772984,
-              54.5979211
-            ],
-            [
-              25.1776643,
-              54.5978446
-            ],
-            [
-              25.1767413,
-              54.5965475
-            ],
-            [
-              25.1767386,
-              54.5958936
-            ],
-            [
-              25.1798863,
-              54.5945292
-            ],
-            [
-              25.1828971,
-              54.593224
-            ],
-            [
-              25.1825578,
-              54.5927409
-            ],
-            [
-              25.184229,
-              54.5921421
-            ],
-            [
-              25.1844131,
-              54.5919894
-            ],
-            [
-              25.185129,
-              54.591391
-            ],
-            [
-              25.1840576,
-              54.5898079
-            ],
-            [
-              25.1833722,
-              54.5893272
-            ],
-            [
-              25.18577,
-              54.5824525
-            ],
-            [
-              25.1863804,
-              54.5695364
-            ],
-            [
-              25.1832797,
-              54.5694369
-            ],
-            [
-              25.18134,
-              54.5692505
-            ],
-            [
-              25.1800968,
-              54.5689058
-            ],
-            [
-              25.1696402,
-              54.5699128
-            ],
-            [
-              25.1692543,
-              54.5700454
-            ],
-            [
-              25.1580584,
-              54.5707961
-            ],
-            [
-              25.1571464,
-              54.5709328
-            ],
-            [
-              25.1524526,
-              54.5722016
-            ],
-            [
-              25.1493724,
-              54.5731124
-            ],
-            [
-              25.1481986,
-              54.5735138
-            ],
-            [
-              25.1484424,
-              54.5765257
-            ],
-            [
-              25.1454896,
-              54.5781872
-            ],
-            [
-              25.1421412,
-              54.5789984
-            ],
-            [
-              25.1417237,
-              54.5790919
-            ],
-            [
-              25.1416647,
-              54.5782432
-            ],
-            [
-              25.1380545,
-              54.5791137
-            ],
-            [
-              25.1352751,
-              54.5774101
-            ],
-            [
-              25.1291364,
-              54.5790015
-            ],
-            [
-              25.1316186,
-              54.5736373
-            ],
-            [
-              25.1212789,
-              54.5696917
-            ],
-            [
-              25.1153922,
-              54.5787069
-            ],
-            [
-              25.1130318,
-              54.5783654
-            ],
-            [
-              25.1034047,
-              54.5828162
-            ],
-            [
-              25.0961315,
-              54.5875448
-            ],
-            [
-              25.0956487,
-              54.5877965
-            ],
-            [
-              25.0936092,
-              54.5891038
-            ],
-            [
-              25.0932177,
-              54.5890644
-            ],
-            [
-              25.0925476,
-              54.5897842
-            ],
-            [
-              25.0967001,
-              54.5898768
-            ],
-            [
-              25.1145037,
-              54.5920048
-            ],
-            [
-              25.1123952,
-              54.5969884
-            ],
-            [
-              25.1134429,
-              54.5984102
-            ],
-            [
-              25.1154958,
-              54.6010194
-            ],
-            [
-              25.1155163,
-              54.601113
-            ],
-            [
-              25.1154857,
-              54.6011795
-            ],
-            [
-              25.1153265,
-              54.6012677
-            ],
-            [
-              25.1073731,
-              54.6050749
-            ],
-            [
-              25.1073421,
-              54.6050943
-            ],
-            [
-              25.1049644,
-              54.6038734
-            ],
-            [
-              25.0993212,
-              54.609011
-            ],
-            [
-              25.0839921,
-              54.6052324
-            ],
-            [
-              25.0784446,
-              54.5991011
-            ],
-            [
-              25.0771083,
-              54.5976947
-            ],
-            [
-              25.0749348,
-              54.5952327
-            ],
-            [
-              25.073104,
-              54.5932953
-            ],
-            [
-              25.0722123,
-              54.59236
-            ],
-            [
-              25.0707233,
-              54.5909151
-            ],
-            [
-              25.0695708,
-              54.5897011
-            ],
-            [
-              25.0692366,
-              54.5893494
-            ],
-            [
-              25.0679373,
-              54.5879845
-            ],
-            [
-              25.0669449,
-              54.5868782
-            ],
-            [
-              25.065809,
-              54.585728
-            ],
-            [
-              25.064418,
-              54.5843191
-            ],
-            [
-              25.0634774,
-              54.5834853
-            ],
-            [
-              25.0620664,
-              54.5822889
-            ],
-            [
-              25.0606715,
-              54.581157
-            ],
-            [
-              25.0591011,
-              54.580009
-            ],
-            [
-              25.057275,
-              54.5786219
-            ],
-            [
-              25.0546283,
-              54.5768265
-            ],
-            [
-              25.0526802,
-              54.5755436
-            ],
-            [
-              25.0514805,
-              54.5747258
-            ],
-            [
-              25.0507661,
-              54.5742333
-            ],
-            [
-              25.0481326,
-              54.5725079
-            ],
-            [
-              25.0472101,
-              54.57188
-            ],
-            [
-              25.0447488,
-              54.5701836
-            ],
-            [
-              25.0433225,
-              54.5690492
-            ],
-            [
-              25.0420703,
-              54.5681047
-            ],
-            [
-              25.0397445,
-              54.5661877
-            ],
-            [
-              25.038149,
-              54.5648926
-            ],
-            [
-              25.036346,
-              54.5634263
-            ],
-            [
-              25.0341242,
-              54.5616068
-            ],
-            [
-              25.0336406,
-              54.5611977
-            ],
-            [
-              25.0324132,
-              54.5602126
-            ],
-            [
-              25.0318153,
-              54.5596487
-            ],
-            [
-              25.0312016,
-              54.5589738
-            ],
-            [
-              25.0307432,
-              54.5584608
-            ],
-            [
-              25.0297348,
-              54.5573375
-            ],
-            [
-              25.0294798,
-              54.5570163
-            ],
-            [
-              25.0289457,
-              54.5562605
-            ],
-            [
-              25.0283892,
-              54.5553411
-            ],
-            [
-              25.0285479,
-              54.5553529
-            ],
-            [
-              25.0301707,
-              54.5553705
-            ],
-            [
-              25.0306227,
-              54.5553754
-            ],
-            [
-              25.0320965,
-              54.5551448
-            ],
-            [
-              25.0323478,
-              54.5551832
-            ],
-            [
-              25.0365845,
-              54.5545663
-            ],
-            [
-              25.0397478,
-              54.5522914
-            ],
-            [
-              25.0414386,
-              54.5521364
-            ],
-            [
-              25.0423427,
-              54.5521068
-            ],
-            [
-              25.0681654,
-              54.5511249
-            ],
-            [
-              25.0833364,
-              54.550541
-            ],
-            [
-              25.0871917,
-              54.5591255
-            ],
-            [
-              25.0912587,
-              54.5584945
-            ],
-            [
-              25.093719,
-              54.5646099
-            ],
-            [
-              25.0972903,
-              54.5638452
-            ],
-            [
-              25.1011563,
-              54.5631923
-            ],
-            [
-              25.1058108,
-              54.5605152
-            ],
-            [
-              25.1080727,
-              54.5592044
-            ],
-            [
-              25.1138163,
-              54.5565711
-            ],
-            [
-              25.1111874,
-              54.5559974
-            ],
-            [
-              25.1101787,
-              54.5557773
-            ],
-            [
-              25.1092523,
-              54.5555751
-            ],
-            [
-              25.111226,
-              54.5541984
-            ],
-            [
-              25.1061848,
-              54.5511931
-            ],
-            [
-              25.1073003,
-              54.5505466
-            ],
-            [
-              25.1068564,
-              54.5500242
-            ],
-            [
-              25.1179034,
-              54.5448595
-            ],
-            [
-              25.1202768,
-              54.5445445
-            ],
-            [
-              25.1220685,
-              54.5443329
-            ],
-            [
-              25.1274717,
-              54.5435247
-            ],
-            [
-              25.12899,
-              54.5452333
-            ],
-            [
-              25.131009,
-              54.5449975
-            ],
-            [
-              25.1312524,
-              54.5458888
-            ],
-            [
-              25.1317888,
-              54.5467476
-            ],
-            [
-              25.131876,
-              54.5477635
-            ],
-            [
-              25.1318532,
-              54.5481796
-            ],
-            [
-              25.1324064,
-              54.5480781
-            ],
-            [
-              25.1363034,
-              54.5472854
-            ],
-            [
-              25.1374899,
-              54.5471111
-            ],
-            [
-              25.1428677,
-              54.5459382
-            ],
-            [
-              25.1430382,
-              54.54599
-            ],
-            [
-              25.1422002,
-              54.5389211
-            ],
-            [
-              25.1595578,
-              54.5403598
-            ],
-            [
-              25.1645898,
-              54.5407801
-            ],
-            [
-              25.1646888,
-              54.5405986
-            ],
-            [
-              25.1646942,
-              54.5404181
-            ],
-            [
-              25.1645654,
-              54.540163
-            ],
-            [
-              25.1642007,
-              54.5398268
-            ],
-            [
-              25.1641631,
-              54.5397055
-            ],
-            [
-              25.1642168,
-              54.5394565
-            ],
-            [
-              25.164088,
-              54.5388605
-            ],
-            [
-              25.1641121,
-              54.5387998
-            ],
-            [
-              25.1641361,
-              54.5382163
-            ],
-            [
-              25.1652885,
-              54.5370733
-            ],
-            [
-              25.1656071,
-              54.5368879
-            ],
-            [
-              25.1660782,
-              54.5367115
-            ],
-            [
-              25.1669343,
-              54.5365261
-            ],
-            [
-              25.1675804,
-              54.5363552
-            ],
-            [
-              25.1681176,
-              54.5362481
-            ],
-            [
-              25.1683889,
-              54.5361366
-            ],
-            [
-              25.1687406,
-              54.5360691
-            ],
-            [
-              25.1689645,
-              54.5359359
-            ],
-            [
-              25.1690809,
-              54.535844
-            ],
-            [
-              25.1692557,
-              54.5356437
-            ],
-            [
-              25.1693242,
-              54.5354727
-            ],
-            [
-              25.1693245,
-              54.5353165
-            ],
-            [
-              25.1693554,
-              54.5352183
-            ],
-            [
-              25.1695674,
-              54.5349142
-            ],
-            [
-              25.1695921,
-              54.5347991
-            ],
-            [
-              25.1695811,
-              54.5346757
-            ],
-            [
-              25.1694784,
-              54.5345027
-            ],
-            [
-              25.1693824,
-              54.5344292
-            ],
-            [
-              25.1692598,
-              54.534352
-            ],
-            [
-              25.1692283,
-              54.534288
-            ],
-            [
-              25.1692404,
-              54.5340973
-            ],
-            [
-              25.1692641,
-              54.5340442
-            ],
-            [
-              25.1694373,
-              54.5339442
-            ],
-            [
-              25.1695164,
-              54.533834
-            ],
-            [
-              25.1695457,
-              54.5337433
-            ],
-            [
-              25.1694363,
-              54.5333594
-            ],
-            [
-              25.1694685,
-              54.5333127
-            ],
-            [
-              25.1695149,
-              54.5332919
-            ],
-            [
-              25.1693585,
-              54.533017
-            ],
-            [
-              25.1692378,
-              54.5329143
-            ],
-            [
-              25.1691332,
-              54.5327696
-            ],
-            [
-              25.1691037,
-              54.5326279
-            ],
-            [
-              25.1690581,
-              54.5323369
-            ],
-            [
-              25.1689213,
-              54.5320677
-            ],
-            [
-              25.1682454,
-              54.5312054
-            ],
-            [
-              25.1674676,
-              54.5304086
-            ],
-            [
-              25.1667327,
-              54.5296895
-            ],
-            [
-              25.1665717,
-              54.5296117
-            ],
-            [
-              25.1664215,
-              54.5294965
-            ],
-            [
-              25.166384,
-              54.5293191
-            ],
-            [
-              25.166335,
-              54.5290571
-            ],
-            [
-              25.1662654,
-              54.5286995
-            ],
-            [
-              25.1662553,
-              54.5283468
-            ],
-            [
-              25.1663133,
-              54.5279361
-            ],
-            [
-              25.1665189,
-              54.5272323
-            ],
-            [
-              25.1666285,
-              54.5266399
-            ],
-            [
-              25.1666495,
-              54.5260151
-            ],
-            [
-              25.1663172,
-              54.5250299
-            ],
-            [
-              25.1663101,
-              54.5248145
-            ],
-            [
-              25.1663858,
-              54.5247629
-            ],
-            [
-              25.1665382,
-              54.5247303
-            ],
-            [
-              25.1669476,
-              54.52467
-            ],
-            [
-              25.1669593,
-              54.5246683
-            ],
-            [
-              25.168059,
-              54.5245853
-            ],
-            [
-              25.1678699,
-              54.5241575
-            ],
-            [
-              25.1672101,
-              54.5236065
-            ],
-            [
-              25.1670492,
-              54.5232858
-            ],
-            [
-              25.1670921,
-              54.5231768
-            ],
-            [
-              25.1661698,
-              54.5230484
-            ],
-            [
-              25.1569211,
-              54.520683
-            ],
-            [
-              25.1541102,
-              54.5198485
-            ],
-            [
-              25.1529193,
-              54.519724
-            ],
-            [
-              25.1451882,
-              54.5180944
-            ],
-            [
-              25.148499,
-              54.5126118
-            ],
-            [
-              25.1506615,
-              54.5103365
-            ],
-            [
-              25.1505466,
-              54.5100427
-            ],
-            [
-              25.1503581,
-              54.5092689
-            ],
-            [
-              25.15021,
-              54.5089953
-            ],
-            [
-              25.1498542,
-              54.5079947
-            ],
-            [
-              25.1498135,
-              54.5078546
-            ],
-            [
-              25.1496725,
-              54.50737
-            ],
-            [
-              25.1493803,
-              54.5068826
-            ],
-            [
-              25.1477647,
-              54.5055452
-            ],
-            [
-              25.1475906,
-              54.5052968
-            ],
-            [
-              25.1475334,
-              54.5051465
-            ],
-            [
-              25.1476015,
-              54.5049805
-            ],
-            [
-              25.147754,
-              54.504777
-            ],
-            [
-              25.1479404,
-              54.5043987
-            ],
-            [
-              25.147798,
-              54.5036493
-            ],
-            [
-              25.1479203,
-              54.5032458
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Riešės seniūnija",
         "population": 8860,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
-          "kindergarten": [],
-          "primary":[],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Didžiosios Riešės vaikų lopšelis-darželis",
+              "coordinates": [25.268814,54.784960],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "kindergarten": [
+            {
+              "title": "Vilniaus r. Riešės vaikų darželis (Riešės seniūnija)",
+              "coordinates": [25.235535,54.810456],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "VšĮ Šviesos slėnis", //ant klaustuko
+              "coordinates": [],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "preSchool": [],
+          "primary":[
+            {
+              "title": "Pikeliškių pradinio ugdymo skyrius",
+              "coordinates": [25.241112,54.876369],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "Eitminiškių gimnazijos Ažulaukės pradinio ugdymo skyrius",
+              "coordinates": [25.359551,54.871697],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
+          "schoolKindergarten": [
+            {
+              "title": "Vilniaus Valdorfo Žalioji mokykla",
+              "coordinates": [25.357905,54.841067],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Riešės šv. Faustinos Kovalskos pagrindinė mokykla",
+              "coordinates": [25.257900,54.806909],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+              "title": "Riešės gimnazija (Riešės seniūnija)",
+              "coordinates": [25.233375,54.808367],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
           "culturalCenter": [],
-          "library": []
+          "library": [
+            {
+              "title": "Pikeliškių kaimo biblioteka",
+              "coordinates": [25.258972,54.875256]
+            },
+            {
+              "title": "Ažulaukės kaimo biblioteka",
+              "coordinates": [25.361809,54.872456]
+            }
+          ]
         }
       },
       "geometry": {
@@ -35601,17 +34478,75 @@ export var seniunijos = {
         "name": "Rudaminos seniūnija",
         "population": 6608,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
+          "nurseryKindergarten": [
+            {
+              "title": "Vilniaus r. Rudaminos lopšelis-darželis",
+              "coordinates": [25.347424,54.594175],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "Rudaminos vaikų lopšelis-darželis „Ąžuoliukas“",
+              "coordinates": [25.342622,54.593657],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "kindergarten": [],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "progymnasium":[],
-          "gymnasium": [],
-          "artSchool":[],
+          "gymnasium": [
+            {
+              "title": "Vilniaus r. Rudaminos gimnazija",
+              "coordinates": [25.344588,54.593800],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "Vilniaus r. Rudaminos Ferdinando Ruščico gimnazija",
+              "coordinates": [25.344994,54.594187],
+              "language": "PL/RU",
+              "LT": false,
+              "PL": true,
+              "RU": true
+            }
+          ],
+          "artSchool":[
+            {
+              "title": "Vilniaus r. Rudaminos meno mokykla",
+              "coordinates": [25.346752,54.594063],
+              "language": "LT/PL/RU",
+              "LT": true,
+              "PL": true,
+              "RU": true
+            }
+          ],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+            {
+              "title": "Rudaminos kultūros centras",
+              "coordinates": [25.347460,54.591189]
+            }
+          ],
+          "library": [
+            {
+              "title": "Vilniaus rajono savivaldybės Centrinė biblioteka",
+              "coordinates": [25.344532,54.592847]
+            }
+          ]
         }
       },
       "geometry": {
@@ -37003,15 +35938,38 @@ export var seniunijos = {
         "education": {  
           "nurseryKindergarten": [],
           "kindergarten": [],
+          "preSchool": [
+            {
+            "title": "Vilniaus r. Rukainių gimnazijos Rukainių ikimokyklinio ugdymo skyrius",
+            "coordinates": [25.507750,54.613638],
+            "language": "LT/PL",
+            "LT": true,
+            "PL": true,
+            "RU": false
+            }
+          ],
           "primary":[],
+          "schoolKindergarten": [],
+          "basicSchool": [],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+            "title": "Vilniaus r. Rukainių gimnazija",
+            "coordinates": [25.506627,54.612608],
+            "language": "LT/PL",
+            "LT": true,
+            "PL": true,
+            "RU": false
+            }
+          ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
           "culturalCenter": [],
-          "library": []
+          "library": [] //ant klaustuko 4 bibliotekos??
         }
       },
       "geometry": {
@@ -38226,17 +37184,58 @@ export var seniunijos = {
         "name": "Sudervės seniūnija",
         "population": 3496,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
+         "nurseryKindergarten": [],
           "kindergarten": [],
-          "primary":[],
+          "preSchool": [],
+          "primary":[
+          {
+            "title": "Buivydiškių pagrindinės mokyklos Sudervės pradinio ugdymo skyrius",
+            "coordinates": [25.089150,54.779654],
+            "language": "LT",
+            "LT": true,
+            "PL": false,
+            "RU": false
+          }
+          ],
+          "schoolKindergarten": [],
+          "basicSchool": [
+            {
+            "title": "Vilniaus r. Sudervės Mariano Zdziechovskio pagrindinė mokykla",
+            "coordinates": [25.080170,54.780271],
+            "language": "PL",
+            "LT": false,
+            "PL": true,
+            "RU": false
+            },
+            {
+            "title": "Vilniaus r. Sudervės Marijano Zdziechovskio pagrindinės mokyklos Rastinėnų pradinio ugdymo skyrius",
+            "coordinates": [25.042420,54.764555],
+            "language": "LT/PL",
+            "LT": true,
+            "PL": true,
+            "RU": false
+          }
+          ],
           "progymnasium":[],
           "gymnasium": [],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+          {
+            "title": "Nemenčinės kultūros centro Sudervės ir Rastinėnų skyriai", //ant klaustuko
+            "coordinates": [25.090313,54.779842]
+          }
+          ],
+          "library": [
+          {
+            "title": "Vilniaus rajono savivaldybės Centrinės bibliotekos Sudervės ir Rastinėnų struktūriniai padaliniai",
+            "coordinates": [25.090278,54.779734] //ant klaustuko
+          }
+          ]
         }
       },
       "geometry": {
@@ -40424,15 +39423,56 @@ export var seniunijos = {
         "education": {  
           "nurseryKindergarten": [],
           "kindergarten": [],
-          "primary":[],
+          "preSchool": [],
+          "primary":[
+            {
+            "title": "Vilniaus r. Nemenčinės Gedimino gimnazijos Veriškių pradinio ugdymo skyrius",
+            "coordinates": [25.479194,54.899464],
+            "language": "LT/PL",
+            "LT": true,
+            "PL": true,
+            "RU": false
+            }
+          ],
+          "schoolKindergarten": [], //ant klaustuko Sužionių pagrindinės mokyklos ikimokyklinio ugdymo skyrius (PL) , Eitminiškių gimnazijos Sužionių pradinio ugdymo skyrius (LT)
+          "basicSchool": [
+            {
+            "title": "Vilniaus r. Nemenčinės Konstanto Parčevskio gimnazijos Sužionių pagrindinio ugdymo skyrius", 
+            "coordinates": [25.50459,54.98734],
+            "language": "PL",
+            "LT": false,
+            "PL": true,
+            "RU": false
+            }
+          ],
           "progymnasium":[],
           "gymnasium": [],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+          {
+            "title": "Sužionių kultūros namai",
+            "coordinates": [25.51000,54.99026]
+          }
+          ],
+          "library": [
+            {
+            "title": "Sužionių biblioteka",
+            "coordinates": [25.50988,54.99030],
+            },
+            {
+            "title": "Skirlėnų biblioteka",
+            "coordinates": [25.62106,54.96959],
+            },
+            {
+            "title": "Veriškių biblioteka",
+            "coordinates": [23.71344,55.72416]
+            }
+          ]
         }
       },
       "geometry": {
@@ -45102,17 +44142,76 @@ export var seniunijos = {
         "name": "Šatrininkų seniūnija",
         "population": 3252,  // 2025m.
         "education": {  
-          "nurseryKindergarten": [],
-          "kindergarten": [],
-          "primary":[],
+         "nurseryKindergarten": [],
+          "kindergarten": [
+            {
+              "title": "MB „Koriukai“",
+              "coordinates": [25.499486,54.658402],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            },
+            {
+              "title": "VšĮ „Saulės gojus“",
+              "coordinates": [25.403957,54.660340],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "preSchool": [
+            {
+              "title": "Vilniaus r. Nemėžio šv. Rapolo Kalinausko gimnazijos Vėliučionių ikimokyklinio ugdymo skyrius",
+              "coordinates": [25.450218,54.656953],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "primary":[
+            {
+              "title": "Vilniaus r. Nemėžio šv. Rapolo Kalinausko gimnazijos Grigaičių pradinio ugdymo skyrius",
+              "coordinates": [25.412190,54.671312],
+              "language": "PL/RU",
+              "LT": false,
+              "PL": true,
+              "RU": true
+            }
+          ],
+          "schoolKindergarten": [],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Kyviškių pagrindinė mokykla",
+              "coordinates": [25.498670,54.656303],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
           "gymnasium": [],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+            {
+              "title": "Grigaičių kultūros centras",
+              "coordinates": [25.411588,54.669716],
+            }
+          ],
+          "library": [
+            {
+              "title": "Grigaičių biblioteka",
+              "coordinates": [25.411530,54.669635],
+            }
+          ]
         }
       },
       "geometry": {
@@ -45972,15 +45071,69 @@ export var seniunijos = {
         "education": {  
           "nurseryKindergarten": [],
           "kindergarten": [],
+          "preSchool": [],
           "primary":[],
+          "schoolKindergarten": [
+            {
+              "title": "Vilniaus r. Buivydiškių mokykla-darželis",
+              "coordinates": [25.194781,54.716919],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
+          "basicSchool": [
+            {
+              "title": "Vilniaus r. Zujūnų gimnazijos Čekoniškių pagrindinio ugdymo skyrius",
+              "coordinates": [25.082546,54.735476],
+              "language": "LT/PL",
+              "LT": true,
+              "PL": true,
+              "RU": false
+            },
+            {
+              "title": "Buivydiškių pagrindinė mokykla",
+              "coordinates": [25.194373,54.716799],
+              "language": "LT",
+              "LT": true,
+              "PL": false,
+              "RU": false
+            }
+          ],
           "progymnasium":[],
-          "gymnasium": [],
+          "gymnasium": [
+            {
+              "title": "Vilniaus r. Zujūnų gimnazija",
+              "coordinates": [25.187994,54.724925],
+              "language": "PL",
+              "LT": false,
+              "PL": true,
+              "RU": false
+            }
+            ],
           "artSchool":[],
+          "sportSchool": [],
+          "supportSchool": [],
           "vocationalSchool":[]
         },
         "culturalSector": {
-          "culturalCenter": [],
-          "library": []
+          "culturalCenter": [
+            {
+              "title": "Rudaminos daugiafunkcinio kultūros centro Zujūnų skyrius",
+              "coordinates": [25.188148,54.724803],
+            },
+            {
+              "title": "Rudaminos daugiafunkcinio kultūros centro Čekoniškių skyrius",
+              "coordinates": [25.081290,54.737522],
+            }
+          ],
+          "library": [
+            {
+              "title": "Zujūnų biblioteka",
+              "coordinates": [25.188438,54.724436],
+            }
+          ]
         }
       },
       "geometry": {
