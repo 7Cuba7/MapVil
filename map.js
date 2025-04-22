@@ -813,7 +813,7 @@ info.onAdd = function (map) {
 info.update = function (props, zodis) {
   if (props) {
       this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
-          '<b>' + props.name + '</b>' + (zodis ? '<br />' + zodis + ' gyventojų' : '');
+          '<b>' + props.name + '</b>' + (zodis ? '<br />' + zodis : '');
   } else {
       this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>';
   }
