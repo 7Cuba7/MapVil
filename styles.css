@@ -48,6 +48,8 @@ html, body {
   z-index: 9999;
   border: 1px solid #000; 
   box-sizing: border-box; 
+  max-height: 100vh; /* or use a specific height like 600px */
+  overflow-y: auto;
 }
 
 #sideBar img{
@@ -99,6 +101,14 @@ html, body {
 }
 
 #culturalLocation{
+  display:none;
+}
+
+#medicineLocation{
+  display:none;
+}
+
+#additionalLocation{
   display:none;
 }
 
