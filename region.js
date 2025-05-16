@@ -16,7 +16,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false 
             },
             {
               "title": "Vilniaus r. Vaidotų lopšelis-darželis „Margaspalvis aitvarėlis“",
@@ -24,7 +25,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false 
 
             }
           ],
@@ -39,7 +41,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false 
             }
           ],
           "progymnasium":[],
@@ -50,7 +53,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false 
             }
           ],
           "artSchool":[
@@ -60,7 +64,8 @@ export var seniunijos = {
               "language": "LT/PL/RU",
               "LT": true,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             }
           ],
           "sportSchool": [],
@@ -72,7 +77,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false 
             }
           ]
         },
@@ -1898,7 +1904,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [
@@ -1908,7 +1915,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             },
             {
               "title": "Viešoji įstaiga „Gandrų lizdas“",
@@ -1916,7 +1924,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true//ant klaustuko
             },
             {
               "title": "VšĮ „Pasakų namukas plius“",
@@ -1924,7 +1933,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
 
 
@@ -1940,7 +1950,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "gymnasium": [
@@ -1950,7 +1961,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -1963,7 +1975,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ]
         },
@@ -3081,7 +3094,9 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
+              
             }
           ],
           "primary":[],
@@ -3093,7 +3108,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -3105,7 +3121,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -3126,7 +3143,20 @@ export var seniunijos = {
               "coordinates": [25.515538,54.804850],
             }
           ]
-        }
+        },
+      "healthSector": {
+        "polyclinic":[],
+        "ambulatory":[],
+        "BpgOffice":[],
+        "familyDoctor":[
+          {
+            "title": "Bezdonių šeimos gydytojo kabinetas",
+            "coordinates": [25.5146,54.8043]
+          }
+        ],
+        "medicalStation":[],
+        "LongTermCareAndNursingHospital":[]
+      }
       },
       "geometry": {
         "type": "Polygon",
@@ -4229,7 +4259,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "primary":[],
@@ -4242,7 +4273,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -4258,6 +4290,19 @@ export var seniunijos = {
             }
           ],
           "library": []
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[
+            {
+              "title": "Buivydžių medicinos punktas",
+              "coordinates": [25.730602,54.836330] //ant klaustuko
+            }
+          ],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -6856,7 +6901,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
           ],
           "preSchool": [],
@@ -6869,7 +6915,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -6888,6 +6935,19 @@ export var seniunijos = {
             }
           ],
           "library": []
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[
+            {
+              "title": "Dūkštų medicinos punktas",
+              "coordinates": [24.973446,54.822262] //ant klaustuko
+            }
+          ],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -9309,7 +9369,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [],
@@ -9325,7 +9386,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Vilniaus r. Valčiūnų gimnazija",
@@ -9333,7 +9395,8 @@ export var seniunijos = {
               "language": "RU",
               "LT": false,
               "PL": false,
-              "RU": true
+              "RU": true,
+              "private": false
             },
             {
               "title": "Juodšilių „Šilo“ gimnazija",
@@ -9341,7 +9404,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -9360,6 +9424,24 @@ export var seniunijos = {
             {
               "title": "Juodšilių biblioteka",
               "coordinates": [25.261859,54.579251]
+            }
+          ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Juodšilių ambulatorija",
+              "coordinates": [25.259574,54.582473]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[
+            {
+              "title": "Juodšilių palaikomojo gydymo ir slaugos ligoninė",
+              "coordinates": [25.259875,54.582426]
             }
           ]
         }
@@ -9999,7 +10081,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [],
@@ -10013,7 +10096,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Pakenės Č. Milošo pagrindinė mokykla",
@@ -10021,7 +10105,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[
@@ -10033,7 +10118,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Kalvelių Stanislavo Moniuškos gimnazija",
@@ -10041,7 +10127,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -10064,6 +10151,24 @@ export var seniunijos = {
             {
               "title": "Kalvelių biblioteka",
               "coordinates": [25.692362, 54.635848]
+            }
+          ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Kalvelių ambulatorija",
+              "coordinates": [25.688311,54.636120]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[
+            {
+              "title": "Šumsko palaikomojo gydymo ir slaugos ligoninė",
+              "coordinates": [25.728425,54.604493]
             }
           ]
         }
@@ -16206,7 +16311,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "preSchool": [
@@ -16216,7 +16322,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "primary":[],
@@ -16231,7 +16338,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Lavoriškių gimnazija",
@@ -16239,7 +16347,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -16257,13 +16366,31 @@ export var seniunijos = {
           "library": [
             {
               "title": "Vilniaus rajono savivaldybės centrinės bibliotekos Lavoriškių struktūrinis padalinys",
-              "coordinates": [25.640422, 54.710590], //ant klaustuko
+              "coordinates": [25.640422, 54.710590],
             },
             {
               "title": "Vilniaus rajono savivaldybės centrinės bibliotekos Mostiškių struktūrinis padalinys",
               "coordinates": [25.667464,54.771263],
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Lavoriškių ambulatorija",
+              "coordinates": [25.641108,54.709512]
+            }
+          ],
+          "BpgOffice":[
+            {
+              "title": " V. Staliulionienės bendros praktikos gydytojo kabinetas",
+              "coordinates": [25.668374,54.771088]
+            }
+          ],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -17737,7 +17864,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [
@@ -17750,7 +17878,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+               "private": false
             }
           ],
           "schoolKindergarten": [
@@ -17760,7 +17889,9 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
+              
             }
           ],
           "basicSchool": [],
@@ -17773,7 +17904,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Maišiagalos Lietuvos didžiojo kunigaikščio Algirdo gimnazija",
@@ -17781,7 +17913,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -17803,6 +17936,19 @@ export var seniunijos = {
               "coordinates": [25.135115, 54.875014],
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Maišiagalos ambulatorija",
+              "coordinates": [25.328402,54.533595]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -19252,7 +19398,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [
@@ -19265,7 +19412,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "schoolKindergarten": [],
@@ -19276,7 +19424,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[
@@ -19288,7 +19437,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -19313,6 +19463,19 @@ export var seniunijos = {
               "coordinates": [25.261956,54.524886]
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Marijampolio ambulatorija",
+              "coordinates": [25.328507,54.533531]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -21235,7 +21398,9 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
+
             }
           ],
           "preSchool": [],
@@ -21263,6 +21428,19 @@ export var seniunijos = {
               "coordinates": [25.651456,54.536080]
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[
+            {
+              "title": "Medininkų BPG kabinetas",
+              "coordinates": [25.649571,54.533011]
+            }
+          ],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -22904,7 +23082,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Mickūnų vaikų lopšelis-darželis",
@@ -22912,7 +23091,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [],
@@ -22928,7 +23108,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Vilniaus r. Mickūnų gimnazija",
@@ -22936,7 +23117,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -22947,6 +23129,19 @@ export var seniunijos = {
         "culturalSector": {
           "culturalCenter": [],
           "library": []
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Mickūnų ambulatorija",
+              "coordinates": [25.519219,54.703073]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -23912,7 +24107,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [],
@@ -23923,7 +24119,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "primary":[],
@@ -23935,7 +24132,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -23946,7 +24144,8 @@ export var seniunijos = {
                 "language": "LT",
                 "LT": true,
                 "PL": false,
-                "RU": false
+                "RU": false,
+                "private": false
             }
           ],
           "artSchool":[],
@@ -23976,6 +24175,14 @@ export var seniunijos = {
               "coordinates": [25.454847,54.877184]
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -27746,7 +27953,8 @@ export var seniunijos = {
               "language": "LT/PL/RU",
               "LT": true,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             },
             {
               "title": "Vilniaus r. Nemenčinės vaikų lopšelis-darželis",
@@ -27754,7 +27962,9 @@ export var seniunijos = {
               "language": "LT/PL/RU",
               "LT": true,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
+              
             },
           ],
           "kindergarten": [],
@@ -27770,7 +27980,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Vilniaus r. Nemenčinės Konstanto Parčevskio gimnazija",
@@ -27778,7 +27989,8 @@ export var seniunijos = {
               "language": "PL/RU",
               "LT": false,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             },
           ],
           "artSchool":[
@@ -27788,7 +28000,8 @@ export var seniunijos = {
               "language": "LT/PL/RU",
               "LT": true,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             }
           ],
           "sportSchool": [
@@ -27798,7 +28011,8 @@ export var seniunijos = {
               "language": "LT/PL/RU",
               "LT": true,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             }
           ],
           "supportSchool": [
@@ -27808,7 +28022,8 @@ export var seniunijos = {
               "language": "none",
               "LT": false,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "vocationalSchool":[]
@@ -27828,6 +28043,24 @@ export var seniunijos = {
             {
               "title": "Nemenčinės miesto vaikų biblioteka",
               "coordinates": [25.463986,54.846409],
+            }
+          ]
+        },
+        "healthSector": {
+          "polyclinic":[
+            {
+              "title": "VšĮ Vilniaus rajono Nemenčinės poliklinika",
+              "coordinates": [25.472480,54.852808]
+            }
+          ],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[
+            {
+              "title": "VšĮ Nemenčinės palaikomojo gydymo ir slaugos ligoninė",
+              "coordinates": [25.472148,54.852368]
             }
           ]
         }
@@ -28826,7 +29059,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [
@@ -28836,7 +29070,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
           ],
           "preSchool": [],
@@ -28848,7 +29083,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "basicSchool": [
@@ -28858,7 +29094,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
           ],
           "progymnasium":[],
@@ -28869,7 +29106,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "VšĮ Uogų slėnio mokymosykla",
@@ -28877,7 +29115,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
           ],
           "artSchool":[],
@@ -28897,6 +29136,23 @@ export var seniunijos = {
               "coordinates": [25.385741,54.604832],
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Nemėžio ambulatorija",
+              "coordinates": [25.353731,54.636904]
+            },
+            {
+              "title": "Skaidiškių ambulatorija",
+              "coordinates": [25.384869,54.606845]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -29501,7 +29757,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [],
@@ -29512,7 +29769,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "primary":[
@@ -29522,7 +29780,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "schoolKindergarten": [],
@@ -29533,7 +29792,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -29544,7 +29804,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Vilniaus r. Paberžės šv. Stanislavo Kostkos gimnazija",
@@ -29552,7 +29813,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -29568,6 +29830,24 @@ export var seniunijos = {
             }
           ],
           "library": []
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Paberžės ambulatorija", 
+              "coordinates": [25.233617,54.943214]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[
+            {
+              "title": "Visalaukės medicinos punktas", 
+              "coordinates": [25.3403,54.9951]
+            }
+          ],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -32024,7 +32304,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [
@@ -32034,7 +32315,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "VšĮ Šviesos slėnis", //ant klaustuko
@@ -32042,7 +32324,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
           ],
           "preSchool": [],
@@ -32053,7 +32336,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Eitminiškių gimnazijos Ažulaukės pradinio ugdymo skyrius",
@@ -32061,7 +32345,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "schoolKindergarten": [
@@ -32071,7 +32356,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "basicSchool": [
@@ -32081,7 +32367,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -32092,7 +32379,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "artSchool":[],
@@ -32110,6 +32398,19 @@ export var seniunijos = {
             {
               "title": "Ažulaukės kaimo biblioteka",
               "coordinates": [25.361809,54.872456]
+            }
+          ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[
+            {
+              "title": "Riešės palaikomojo gydymo ir slaugos ligoninė",
+              "coordinates": [25.281990,54.807842]
             }
           ]
         }
@@ -34485,7 +34786,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Rudaminos vaikų lopšelis-darželis „Ąžuoliukas“",
@@ -34493,7 +34795,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "kindergarten": [],
@@ -34509,7 +34812,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Vilniaus r. Rudaminos Ferdinando Ruščico gimnazija",
@@ -34517,7 +34821,8 @@ export var seniunijos = {
               "language": "PL/RU",
               "LT": false,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             }
           ],
           "artSchool":[
@@ -34527,7 +34832,8 @@ export var seniunijos = {
               "language": "LT/PL/RU",
               "LT": true,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             }
           ],
           "sportSchool": [],
@@ -34547,6 +34853,19 @@ export var seniunijos = {
               "coordinates": [25.344532,54.592847]
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Rudaminos ambulatorija",
+              "coordinates": [25.344959,54.595746]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -35945,7 +36264,8 @@ export var seniunijos = {
             "language": "LT/PL",
             "LT": true,
             "PL": true,
-            "RU": false
+            "RU": false,
+            "private": false
             }
           ],
           "primary":[],
@@ -35959,7 +36279,8 @@ export var seniunijos = {
             "language": "LT/PL",
             "LT": true,
             "PL": true,
-            "RU": false
+            "RU": false,
+            "private": false
             }
           ],
           "artSchool":[],
@@ -35970,6 +36291,24 @@ export var seniunijos = {
         "culturalSector": {
           "culturalCenter": [],
           "library": [] //ant klaustuko 4 bibliotekos??
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[
+            {
+              "title": "Rukainių ambulatorija",
+              "coordinates": [25.506616,54.613723]
+            }
+          ],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[
+            {
+              "title": "Savičiūnų medicinos punktas",
+              "coordinates": [25.572200,54.575285] //ant klaustuko
+            }
+          ],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -37194,7 +37533,8 @@ export var seniunijos = {
             "language": "LT",
             "LT": true,
             "PL": false,
-            "RU": false
+            "RU": false,
+            "private": false
           }
           ],
           "schoolKindergarten": [],
@@ -37205,7 +37545,8 @@ export var seniunijos = {
             "language": "PL",
             "LT": false,
             "PL": true,
-            "RU": false
+            "RU": false,
+            "private": false
             },
             {
             "title": "Vilniaus r. Sudervės Marijano Zdziechovskio pagrindinės mokyklos Rastinėnų pradinio ugdymo skyrius",
@@ -37213,7 +37554,8 @@ export var seniunijos = {
             "language": "LT/PL",
             "LT": true,
             "PL": true,
-            "RU": false
+            "RU": false,
+            "private": false
           }
           ],
           "progymnasium":[],
@@ -37236,6 +37578,19 @@ export var seniunijos = {
             "coordinates": [25.090278,54.779734] //ant klaustuko
           }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[
+            {
+              "title": "Vilniaus rajono centrinės poliklinikos Sudervės bendrosios praktikos gydytojo kabinetas",
+              "coordinates": [25.089127,54.779271]
+            }
+          ],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -39431,7 +39786,8 @@ export var seniunijos = {
             "language": "LT/PL",
             "LT": true,
             "PL": true,
-            "RU": false
+            "RU": false,
+            "private": false
             }
           ],
           "schoolKindergarten": [], //ant klaustuko Sužionių pagrindinės mokyklos ikimokyklinio ugdymo skyrius (PL) , Eitminiškių gimnazijos Sužionių pradinio ugdymo skyrius (LT)
@@ -39442,7 +39798,8 @@ export var seniunijos = {
             "language": "PL",
             "LT": false,
             "PL": true,
-            "RU": false
+            "RU": false,
+            "private": false
             }
           ],
           "progymnasium":[],
@@ -39473,6 +39830,19 @@ export var seniunijos = {
             "coordinates": [23.71344,55.72416]
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[
+            {
+            "title": "Sužionių šeimos gydytojo kabinetas",
+            "coordinates": [25.509891,54.990251]
+            }
+          ],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -44150,7 +44520,9 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
+
             },
             {
               "title": "VšĮ „Saulės gojus“",
@@ -44158,7 +44530,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": true
             }
           ],
           "preSchool": [
@@ -44168,7 +44541,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "primary":[
@@ -44178,7 +44552,8 @@ export var seniunijos = {
               "language": "PL/RU",
               "LT": false,
               "PL": true,
-              "RU": true
+              "RU": true,
+              "private": false
             }
           ],
           "schoolKindergarten": [],
@@ -44189,7 +44564,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -44212,6 +44588,14 @@ export var seniunijos = {
               "coordinates": [25.411530,54.669635],
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
@@ -45080,7 +45464,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "basicSchool": [
@@ -45090,7 +45475,8 @@ export var seniunijos = {
               "language": "LT/PL",
               "LT": true,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             },
             {
               "title": "Buivydiškių pagrindinė mokykla",
@@ -45098,7 +45484,8 @@ export var seniunijos = {
               "language": "LT",
               "LT": true,
               "PL": false,
-              "RU": false
+              "RU": false,
+              "private": false
             }
           ],
           "progymnasium":[],
@@ -45109,7 +45496,8 @@ export var seniunijos = {
               "language": "PL",
               "LT": false,
               "PL": true,
-              "RU": false
+              "RU": false,
+              "private": false
             }
             ],
           "artSchool":[],
@@ -45134,6 +45522,14 @@ export var seniunijos = {
               "coordinates": [25.188438,54.724436],
             }
           ]
+        },
+        "healthSector": {
+          "polyclinic":[],
+          "ambulatory":[],
+          "BpgOffice":[],
+          "familyDoctor":[],
+          "medicalStation":[],
+          "LongTermCareAndNursingHospital":[]
         }
       },
       "geometry": {
