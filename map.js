@@ -67,6 +67,43 @@ function toggleKindergartenPopup() {
 
 add2Button.addEventListener('click', toggleKindergartenPopup);
 
+let medicineNum = document.getElementById('medicineLocation');
+let add3Button=document.getElementById('add3')
+let medicineVisible = false;
+
+function toggleMedicinePopup() {
+  if (medicineVisible) {
+    medicineNum.style.display = 'none';
+    add3Button.innerHTML = "+";
+  } else {
+    medicineNum.style.display = 'block';
+    add3Button.innerHTML = "-";
+  }
+  medicineVisible = !medicineVisible;
+}
+
+add3Button.addEventListener('click', toggleMedicinePopup);
+
+
+
+
+let additionalNum = document.getElementById('additionalLocation');
+let add4Button=document.getElementById('add4')
+let additionalVisible = false;
+
+function toggleAdditionalPopup() {
+  if (additionalVisible) {
+    additionalNum.style.display = 'none';
+    add4Button.innerHTML = "+";
+  } else {
+    additionalNum.style.display = 'block';
+    add4Button.innerHTML = "-";
+  }
+  additionalVisible = !additionalVisible;
+}
+
+add4Button.addEventListener('click', toggleAdditionalPopup);
+
 let geojson = null;
 const clearButton = document.getElementById('clearButton');
 const radioButtons = document.querySelectorAll('input[name="obj_Amount"]');
@@ -88,7 +125,8 @@ function clearSelections()
   languageCondition = {
     LT: false,
     PL: false,
-    RU: false
+    RU: false,
+    private: false
   };
 
   // isvalo visus markerius
@@ -108,7 +146,7 @@ function clearSelections()
   });
 
   // isvalo kulturos markerius
-  ['culturalCenter', 'library'].forEach(type => {
+  Object.keys(markerStates).forEach(type => {
     seniunijos.features.forEach(feature => {
       if(feature.properties.culturalSector && feature.properties.culturalSector[type]) {
         const locations = feature.properties.culturalSector[type];
@@ -120,7 +158,22 @@ function clearSelections()
         });
       }
     });
-    markerStates[type] = false; // Resetina state
+    markerStates[type] = false; // Reset the state
+  });
+
+  Object.keys(markerStates).forEach(type => {
+    seniunijos.features.forEach(feature => {
+      if(feature.properties.healthSector && feature.properties.healthSector[type]) {
+        const locations = feature.properties.healthSector[type];
+        locations.forEach(location => {
+          if (location.marker) {
+            map.removeLayer(location.marker);
+            location.marker = null;
+          }
+        });
+      }
+    });
+    markerStates[type] = false; // Reset the state
   });
   info.update();
   updateMap();
@@ -130,40 +183,36 @@ clearButton.addEventListener('click', clearSelections);
 
 // Seniuniju atitinkamos spalvos pagal duomenys 
 function getColorBigNumbers(d) {
-  return d > 15000 ? 'rgba(128, 0, 0, 0.6)' :    // Dark Red
-         d > 10000 ? 'rgba(178, 34, 34, 0.6)' :   // Firebrick
-         d > 8000  ? 'rgba(255, 0, 0, 0.6)' :     // Red
-         d > 6000  ? 'rgba(255, 99, 71, 0.6)' :    // Tomato
-         d > 4000  ? 'rgba(255, 69, 0, 0.6)' :     // Orange Red
-         d > 2000  ? 'rgba(255, 160, 122, 0.6)' :  // Light Salmon
-         d > 500   ? 'rgba(255, 182, 193, 0.6)' :  // Light Pink
-                    'rgba(255, 240, 245, 0.6)';   // Very Light Pink
+  return d > 15000 ? 'rgb(112, 0, 0)' :  
+         d > 10000 ? 'rgb(160, 0, 0)' :
+         d > 8000  ? 'rgb(202, 0, 0)' :
+         d > 6000  ? 'rgb(255, 0, 0)' :
+         d > 4000  ? 'rgb(255, 87, 87)' :
+         d > 2000  ? 'rgb(255, 146, 146)' :
+         d > 500   ? 'rgb(255, 204, 204)' :
+                    'rgb(255, 255, 255)';  
 }
 
 function getColorSmallNumbers2(d) {
-  return d > 6 ? 'rgba(128, 0, 0, 0.6)' :    // Dark Red
-         d > 5 ? 'rgba(139, 0, 0, 0.6)' :     // Darker Red
-         d > 4 ? 'rgba(178, 34, 34, 0.6)' :   // Firebrick
-         d > 3 ? 'rgba(220, 20, 60, 0.6)' :   // Crimson
-         d > 2 ? 'rgba(255, 0, 0, 0.6)' :     // Red
-         d > 1 ? 'rgba(255, 69, 0, 0.6)' :    // Orange Red
-         d > 0 ? 'rgba(255, 200, 220, 0.6)' : // Very Light Pink
-                'rgb(255, 255, 255)';   // Almost White
+  return d > 6 ? 'rgba(128, 0, 0, 0.6)' :    
+         d > 5 ? 'rgba(139, 0, 0, 0.6)' :     
+         d > 4 ? 'rgba(178, 34, 34, 0.6)' :   
+         d > 3 ? 'rgba(220, 20, 60, 0.6)' :  
+         d > 2 ? 'rgba(255, 0, 0, 0.6)' :    
+         d > 1 ? 'rgba(255, 69, 0, 0.6)' :    
+         d > 0 ? 'rgba(255, 200, 220, 0.6)' : 
+                'rgb(255, 255, 255)';   
 }
 
 function getColorSmallNumbers(d) {
-  return d > 10 ? '#990000' :  // Dark red
-         d > 9  ? '#b30000' :
-         d > 8  ? '#cc0000' :
-         d > 7  ? '#e60000' :
-         d > 6  ? '#ff0000' :  // Full red
-         d > 5  ? '#ff3333' :
-         d > 4  ? '#ff6666' :
-         d > 3  ? '#ff9999' :
-         d > 2  ? '#ffcccc' :
-         d > 1  ? '#ffe5e5' :
-         d > 0  ? '#fff2f2' :
-                  '#ffffff';  // Pure white
+  return d > 6 ? 'rgb(112, 0, 0)' :  
+         d > 5  ? 'rgb(160, 0, 0)' :
+         d > 4  ? 'rgb(202, 0, 0)' :
+         d > 3  ? 'rgb(255, 0, 0)' :
+         d > 2  ? 'rgb(255, 87, 87)' :
+         d > 1  ? 'rgb(255, 146, 146)' :
+         d > 0  ? 'rgb(255, 204, 204)' :
+                  'rgb(255, 255, 255)'; 
 }
 
 
@@ -199,6 +248,20 @@ function countCultureFacilities(feature) {
   return culturalCentersCount + librariesCount;
 }
 
+function countMedicineFacilities(feature) {
+  const health = feature.properties.healthSector || {};
+  const polyclinicCount = health.polyclinic?.length || 0;
+  const ambulatoryCount = health.ambulatory?.length || 0;
+  const BpgOfficeCount = health.BpgOffice?.length || 0;
+  const familyDoctorCount = health.familyDoctor?.length || 0;
+
+  const medicalStationCount = health.medicalStation?.length || 0;
+  const LongTermCareAndNursingHospitalCount = health.LongTermCareAndNursingHospital?.length || 0;
+  
+ 
+  return polyclinicCount + ambulatoryCount + BpgOfficeCount + familyDoctorCount + medicalStationCount + LongTermCareAndNursingHospitalCount;
+}
+
 // Bendra funkcija skaiciuoti objektu pagal duomenu kelio
 function countFacilities(feature, propertyPath) {
   
@@ -226,6 +289,7 @@ function highlightFeature(e) {
 
   layer.bringToFront();
   info.update(layer.feature.properties, word);
+  //info.update();
 }
 
 function resetHighlight(e) {
@@ -261,7 +325,13 @@ let markerStates = {
   schoolKindergarten: false,
   supportSchool: false,
   sportSchool: false,
-  preSchool: false
+  preSchool: false,
+  polyclinic: false,
+  ambulatory: false,
+  BpgOffice: false,
+  familyDoctor: false,
+  medicalStation: false,
+  LongTermCareAndNursingHospital: false
 };
 
 document.querySelectorAll('[data-marker-location]').forEach(button => {
@@ -344,7 +414,7 @@ document.querySelectorAll('[data-marker-location]').forEach(button => {
                      // jei yra pasirinktu kalbu, tikrinti ar lokacija atitinka pasirinktas kalbas
                      else {
                        const hasAllSelected = selectedLanguages.every(lang => location[lang]);
-                       const hasNoUnselected = ['LT', 'PL', 'RU']
+                       const hasNoUnselected = ['LT', 'PL', 'RU', 'private']
                          .filter(lang => !selectedLanguages.includes(lang))
                          .every(lang => !location[lang]);
                        
@@ -403,6 +473,53 @@ document.querySelectorAll('[data-marker-location]').forEach(button => {
           });
         }
       });
+    } else if(attribute == 'polyclinic' || attribute == 'ambulatory' || attribute == 'BpgOffice' || attribute == 'familyDoctor' || attribute == 'medicalStation' || attribute == 'LongTermCareAndNursingHospital') {
+      seniunijos.features.forEach(feature => {
+        if(feature.properties.healthSector && feature.properties.healthSector[attribute]) {
+          const locations = feature.properties.healthSector[attribute];
+          switch (attribute) {
+            case 'polyclinic':
+                emoji = '🏥';
+                break;
+            case 'ambulatory':
+                emoji = '🩺';
+                break;
+            case 'BpgOffice':
+                emoji = '⚕️';
+                break;
+            case 'familyDoctor':
+                emoji = '👨‍👩‍👧‍👦';
+                break;
+            case 'medicalStation':
+                emoji = '🚑';
+                break;
+            case 'LongTermCareAndNursingHospital':
+                emoji = '🛏️';
+                break;
+            default:
+                emoji = '📍'; 
+                break;
+        }
+          locations.forEach(location => {
+            if (location.coordinates && location.coordinates.length === 2) {
+              if (!markerStates[attribute]) {
+                location.marker = L.marker([location.coordinates[1], location.coordinates[0]], {
+                  icon: L.divIcon({
+                      className: 'emoji-icon',
+                      html: emoji, 
+                      iconSize: [10, 10]
+                  })
+              }).addTo(map).bindPopup(location.title);
+              } else {
+                if (location.marker) {
+                  map.removeLayer(location.marker);
+                  location.marker = null;
+                }
+              }
+            }
+          });
+        }
+      });
     }
     
     markerStates[attribute] = !markerStates[attribute];
@@ -413,7 +530,8 @@ document.querySelectorAll('[data-marker-location]').forEach(button => {
 let languageCondition={
   LT:false,
   PL:false,
-  RU:false
+  RU:false,
+  private:false
 }
 
 document.querySelectorAll('[data-language]').forEach(button => {
@@ -466,7 +584,7 @@ document.querySelectorAll('[data-language]').forEach(button => {
                 else {
                   // tikrinti ar lokacija atitinka pasirinktas kalbas ir nera nepasirinktu kalbu
                   const hasAllSelected = selectedLanguages.every(lang => location[lang]);
-                  const hasNoUnselected = ['LT', 'PL', 'RU']
+                  const hasNoUnselected = ['LT', 'PL', 'RU', 'private']
                     .filter(lang => !selectedLanguages.includes(lang))
                     .every(lang => !location[lang]);
                   
@@ -518,7 +636,6 @@ function updateMap(selectedCat)
   }
 
   let style;
-  let point;
   switch(selectedCat)
   {
     case 'population':
@@ -530,7 +647,7 @@ function updateMap(selectedCat)
           opacity: 1,
           color: 'black',
           dashArray: '3',
-          fillOpacity: 1
+          fillOpacity: 0.7
         };
       };
       arGalima=1;
@@ -750,6 +867,104 @@ function updateMap(selectedCat)
     case 'library':
       style = (feature) => {
         word = countFacilities(feature, 'culturalSector.library');
+        return {
+          fillColor: getColorSmallNumbers(word),
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'medicine':
+      style = (feature) => {
+        word=countMedicineFacilities(feature);
+        return {
+          fillColor: getColorSmallNumbers(word), 
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'polyclinic':
+      style = (feature) => {
+        word=countFacilities(feature, 'healthSector.polyclinic');
+        return {
+          fillColor: getColorSmallNumbers(word),
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'ambulatory':
+      style = (feature) => {
+        word=countFacilities(feature, 'healthSector.ambulatory');
+        return {
+          fillColor: getColorSmallNumbers(word),
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'BpgOffice':
+      style = (feature) => {
+        word=countFacilities(feature, 'healthSector.BpgOffice');
+        return {
+          fillColor: getColorSmallNumbers(word),
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'familyDoctor':
+      style = (feature) => {
+        word=countFacilities(feature, 'healthSector.familyDoctor');
+        return {
+          fillColor: getColorSmallNumbers(word),
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'medicalStation':
+      style = (feature) => {
+        word=countFacilities(feature, 'healthSector.medicalStation');
+        return {
+          fillColor: getColorSmallNumbers(word),
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      };
+      arGalima=1;
+      break;
+      case 'LongTermCareAndNursingHospital':
+      style = (feature) => {
+        word=countFacilities(feature, 'healthSector.LongTermCareAndNursingHospital');
         return {
           fillColor: getColorSmallNumbers(word),
           weight: 2,
