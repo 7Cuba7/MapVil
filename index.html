@@ -30,10 +30,7 @@
       <div id="sideBar">
         <img src="close-x-svgrepo-com.svg" alt="Exit" />
         <br />
-        <label
-          ><input type="radio" name="obj_Amount" value="population" />Gyventojų
-          skaičius</label
-        ><br />
+        <br />
         <hr style="margin: 10px 0; border: 1px solid #ccc;">
 
         <button id="add1">+</button>
@@ -170,7 +167,12 @@
                 <button  data-language="PL">Lenkų</button>
                 <button  data-language="RU">Rusų</button>
             </div>
+            
+            <!-- <label>Priklausomybė: </label> -->
 
+            <!-- <div>
+              <button  data-language="private">Privati</button>
+            </div> -->
           </div>
         </div>
         
@@ -202,10 +204,89 @@
           <button data-marker-location="library" id="libraryLocation">📚</button>
         </div>
         <hr style="margin: 10px 0; border: 1px solid #ccc;">
+        <button id="add3">+</button>
+        <label
+          ><input type="radio" name="obj_Amount" value="medicine" />Medicinos įstaigos</label
+        >
+        <div id="medicineLocation">
+          <label id="polyclinicLabel"
+          ><input
+            type="radio"
+            name="obj_Amount"
+            class="location-checkbox"
+            value="polyclinic"
+          />Poliklinikos</label
+        >
+        <button data-marker-location="polyclinic" id="polyclinicLocation">🏥</button>
+        <br />
+        <label id="ambulatoryLabel"
+        ><input
+          type="radio"
+          name="obj_Amount"
+          class="location-checkbox"
+          value="ambulatory"
+        />Ambulatorijos</label
+      >
+      <button data-marker-location="ambulatory" id="ambulatoryLocation">🩺</button>
+      <br />
+      <label id="BpgOfficeLabel"
+        ><input
+          type="radio"
+          name="obj_Amount"
+          class="location-checkbox"
+          value="BpgOffice"
+        />BPG kabinetai</label
+      >
+      <button data-marker-location="BpgOffice" id="BpgOfficeLocation">⚕️</button>
+      <br />
+      <label id="familyDoctorLabel"
+        ><input
+          type="radio"
+          name="obj_Amount"
+          class="location-checkbox"
+          value="familyDoctor"
+        />Šeimos gydytojų kabinetai</label
+      >
+      <button data-marker-location="familyDoctor" id="familyDoctorLocation">👨‍👩‍👧‍👦</button>
+      <br />
+      <label id="medicalStationLabel"
+        ><input
+          type="radio"
+          name="obj_Amount"
+          class="location-checkbox"
+          value="medicalStation"
+        />Medicinos punktai</label
+      >
+      <button data-marker-location="medicalStation" id="medicalStationLocation">🚑</button>
+      <br />
+      <label id="LongTermCareAndNursingHospitalLabel"
+        ><input
+          type="radio"
+          name="obj_Amount"
+          class="location-checkbox"
+          value="LongTermCareAndNursingHospital"
+        />Palaikomojo gydymo ir slaugos ligoninės</label
+      >
+      <button data-marker-location="LongTermCareAndNursingHospital" id="LongTermCareAndNursingHospitalLocation">🛏️</button>
+      <br />
+        </div>
+        <hr style="margin: 10px 0; border: 1px solid #ccc;">
+        <button id="add4">+</button>
+        <label>
+          <input type="radio" style="position: absolute; opacity: 0; pointer-events: none;" />
+          Papildomai
+        </label>
+        <div id="additionalLocation">
+          <label
+          ><input type="radio" name="obj_Amount" value="population" />Gyventojų
+          skaičius</label
+        ><br />
+        </div>
+        <hr style="margin: 10px 0; border: 1px solid #ccc;">
         <button id="clearButton">Pašalinti pasirinkimus</button>
       </div>
     </div>
     <div id="map"></div>
-    <script type="module" src="map.js"></script>
+    <script type="module" src="/JS/map.js"></script>
   </body>
 </html>
