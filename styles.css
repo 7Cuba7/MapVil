@@ -13,8 +13,9 @@ html, body {
   height: 5%;
   width: 100%;
   position: relative;
-  border: 1px solid #000; 
+  border-bottom: 1px solid #000; 
   box-sizing: border-box; 
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.7);
 }
 
 #logo img{
@@ -39,31 +40,67 @@ html, body {
 
 #drawButton{
   position: absolute;
-  right: 100px; 
-  top: 50%; 
-  transform: translateY(-50%);
+  bottom: 80px;
+  left: 10px;
+  z-index: 1000;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+#drawButton img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+#drawButton.active {
+  background-color: #4CAF50;
 }
 
 #distanceButton{
   position: absolute;
-  right: 230px; 
-  top: 50%; 
-  transform: translateY(-50%);
+  bottom: 130px;
+  left: 10px;
+  z-index: 1000;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+#distanceButton img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+#distanceButton.active {
+  background-color: #4CAF50;
 }
 
 #sideBar {
   display: none;
   background-color: #F6F5F5;
-  width: clamp(250px, 25%, 400px);
-  height: 100vh;
+  width: 40vh;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 6vh;
+  right: 10px;
   z-index: 99999;
   border: 1px solid #000; 
   box-sizing: border-box; 
-  max-height: 100vh; /* or use a specific height like 600px */
+  max-height: 90vh;
   overflow-y: auto;
+  border-radius: 15px 15px 15px 15px;
+  padding: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 #sideBar img{
@@ -76,10 +113,10 @@ html, body {
 
 #drawBar {
   position: fixed;
-  right: 90px;
-  top: 45px;
-  width: 200px;
-  height: 50px;
+  left: 60px;
+  bottom: 80px;
+  width: 176px;
+  height: 40px;
   background-color: white;
   border: 2px solid #000;
   border-radius: 15px;
@@ -90,14 +127,14 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  gap: 15px;
-  
+  gap: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 #drawBar div {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border: 1px solid #ccc;
   border-radius: 3px;
   cursor: pointer;
@@ -105,6 +142,7 @@ html, body {
   padding: 0;
   flex: 0 0 auto;
   position: relative;
+  transform: translateY(-5px);
 }
 
 #red {
