@@ -11,8 +11,38 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-//======================pasirinkimu lango atidarymas/uzdarymas=======================\\
+// Initialize info control first
+var info = L.control({position: 'topleft'});
+
+let isDistance = false;
+
+info.onAdd = function (map) {
+  this._div = L.DomUtil.create('div', 'info');
+  this.update();
+  return this._div;
+};
+
+info.update = function (props, value) {
+  if(isDistance)
+    {
+      this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
+      '<b>' + `Atstumas: ${(props / 1000).toFixed(2)} km` + '</b>';
+    }
+  else if (props) {
+    this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
+      '<b>' + props.name + '</b>' + 
+      (value !== undefined && value !== null ? '<br />' + value : '');
+  } 
+  else {
+    this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>';
+  }
+};
+
+info.addTo(map);
+
+// Then add the GeoJSON layer
 L.geoJSON(seniunijos).addTo(map);
+
 let menuButton = document.querySelector('#button-menu img');
 let sidePop = document.getElementById('sideBar');
 
@@ -104,6 +134,7 @@ function toggleAdditionalPopup() {
 
 add4Button.addEventListener('click', toggleAdditionalPopup);
 
+let selectedCat = null;
 let geojson = null;
 const clearButton = document.getElementById('clearButton');
 const radioButtons = document.querySelectorAll('input[name="obj_Amount"]');
@@ -284,12 +315,92 @@ function highlightFeature(e) {
       weight: 4,
       color: '#666',
       dashArray: '',
-      fillOpacity: 0.7
+      fillOpacity: 0.7,
+      zIndexOffset: -1000  
   });
 
-  layer.bringToFront();
-  info.update(layer.feature.properties, word);
-  //info.update();
+  // Calculate the value based on the current category
+  let value;
+  if (selectedCat) {
+    switch(selectedCat) {
+      case 'population':
+        value = layer.feature.properties.population;
+        break;
+      case 'education':
+        value = countEducationFacilities(layer.feature);
+        break;
+      case 'culture':
+        value = countCultureFacilities(layer.feature);
+        break;
+      case 'kindergarten':
+        value = countFacilities(layer.feature, 'education.kindergarten');
+        break;
+      case 'nurseryKindergarten':
+        value = countFacilities(layer.feature, 'education.nurseryKindergarten');
+        break;
+      case 'primary':
+        value = countFacilities(layer.feature, 'education.primary');
+        break;
+      case 'progymnasium':
+        value = countFacilities(layer.feature, 'education.progymnasium');
+        break;
+      case 'preSchool':
+        value = countFacilities(layer.feature, 'education.preSchool');
+        break;
+      case 'basicSchool':
+        value = countFacilities(layer.feature, 'education.basicSchool');
+        break;
+      case 'schoolKindergarten':
+        value = countFacilities(layer.feature, 'education.schoolKindergarten');
+        break;
+      case 'supportSchool':
+        value = countFacilities(layer.feature, 'education.supportSchool');
+        break;
+      case 'sportSchool':
+        value = countFacilities(layer.feature, 'education.sportSchool');
+        break;
+      case 'gymnasium':
+        value = countFacilities(layer.feature, 'education.gymnasium');
+        break;
+      case 'artSchool':
+        value = countFacilities(layer.feature, 'education.artSchool');
+        break;
+      case 'vocationalSchool':
+        value = countFacilities(layer.feature, 'education.vocationalSchool');
+        break;
+      case 'culturalCenter':
+        value = countFacilities(layer.feature, 'culturalSector.culturalCenter');
+        break;
+      case 'library':
+        value = countFacilities(layer.feature, 'culturalSector.library');
+        break;
+      case 'medicine':
+        value = countMedicineFacilities(layer.feature);
+        break;
+      case 'polyclinic':
+        value = countFacilities(layer.feature, 'healthSector.polyclinic');
+        break;
+      case 'ambulatory':
+        value = countFacilities(layer.feature, 'healthSector.ambulatory');
+        break;
+      case 'BpgOffice':
+        value = countFacilities(layer.feature, 'healthSector.BpgOffice');
+        break;
+      case 'familyDoctor':
+        value = countFacilities(layer.feature, 'healthSector.familyDoctor');
+        break;
+      case 'medicalStation':
+        value = countFacilities(layer.feature, 'healthSector.medicalStation');
+        break;
+      case 'LongTermCareAndNursingHospital':
+        value = countFacilities(layer.feature, 'healthSector.LongTermCareAndNursingHospital');
+        break;
+      default:
+        value = null;
+    }
+  }
+  
+  info.update(layer.feature.properties, value);
 }
 
 function resetHighlight(e) {
@@ -303,9 +414,15 @@ function zoomToFeature(e) {
 
 function onEachFeature(feature, layer) {
   layer.on({
-      mouseover: highlightFeature,
-      mouseout: resetHighlight,
-      click: zoomToFeature
+    mouseover: function(e) {
+      if (!isDrawing && !isDistance) highlightFeature(e);
+    },
+    mouseout: function(e) {
+      if (!isDrawing && !isDistance) resetHighlight(e);
+    },
+    click: function(e){
+      if(!isDrawing && !isDistance) zoomToFeature(e);
+    }
   });
 }
 //========================================================\\
@@ -537,6 +654,8 @@ let languageCondition={
 document.querySelectorAll('[data-language]').forEach(button => {
   button.addEventListener('click', function(e) {
     let language = this.getAttribute('data-language');
+    
+    
     if(languageCondition[language]) {
       languageCondition[language] = false;
       this.classList.remove('active');
@@ -549,6 +668,9 @@ document.querySelectorAll('[data-language]').forEach(button => {
     const selectedLanguages = Object.entries(languageCondition)
       .filter(([_, isSelected]) => isSelected)
       .map(([lang]) => lang);
+
+    // ar tik private yra pasirinktas
+    const onlyPrivateSelected = selectedLanguages.length === 1 && selectedLanguages[0] === 'private';
 
     // tikrinti visus markerius, kurie yra matomi
     Object.entries(markerStates).forEach(([type, isVisible]) => {
@@ -569,26 +691,32 @@ document.querySelectorAll('[data-language]').forEach(button => {
                   typeof location.coordinates[0] === 'number' && 
                   typeof location.coordinates[1] === 'number') {
                 
-                // jei nera pasirinktu kalbu, rodyti visus markerius
-                if (selectedLanguages.length === 0) {
-                  let emoji = getEmojiForType(type);
-                  location.marker = L.marker([location.coordinates[1], location.coordinates[0]], {
-                    icon: L.divIcon({
-                      className: 'emoji-icon',
-                      html: emoji,
-                      iconSize: [10, 10]
-                    })
-                  }).addTo(map).bindPopup(location.title);
-                } 
-                // jei yra pasirinktu kalbu, tikrinti ar lokacija atitinka pasirinktas kalbas
+                // tik private mygtukas paspaustas
+                if (onlyPrivateSelected) {
+                  if (location.private === true) {
+                    let emoji = getEmojiForType(type);
+                    location.marker = L.marker([location.coordinates[1], location.coordinates[0]], {
+                      icon: L.divIcon({
+                        className: 'emoji-icon',
+                        html: emoji,
+                        iconSize: [10, 10]
+                      })
+                    }).addTo(map).bindPopup(location.title);
+                  }
+                }
+                // Normal language filtering
                 else {
-                  // tikrinti ar lokacija atitinka pasirinktas kalbas ir nera nepasirinktu kalbu
-                  const hasAllSelected = selectedLanguages.every(lang => location[lang]);
-                  const hasNoUnselected = ['LT', 'PL', 'RU', 'private']
-                    .filter(lang => !selectedLanguages.includes(lang))
-                    .every(lang => !location[lang]);
+                  // viskas apart private
+                  const selectedLangs = selectedLanguages.filter(lang => lang !== 'private');
                   
-                  if (hasAllSelected && hasNoUnselected) {
+                  
+                  const matchesPrivate = !languageCondition.private || location.private === true;
+                  const matchesLanguages = selectedLangs.length === 0 || 
+                    (selectedLangs.every(lang => location[lang]) && 
+                     ['LT', 'PL', 'RU'].filter(lang => !selectedLangs.includes(lang))
+                      .every(lang => !location[lang]));
+
+                  if (matchesPrivate && matchesLanguages) {
                     let emoji = getEmojiForType(type);
                     location.marker = L.marker([location.coordinates[1], location.coordinates[0]], {
                       icon: L.divIcon({
@@ -627,20 +755,30 @@ function getEmojiForType(type) {
   }
 }
 
-let word=0;
-function updateMap(selectedCat)
-{
+function setUpRadioButtonListeners() {
+  var radioButtons = document.querySelectorAll('input[name="obj_Amount"]');
+  
+  radioButtons.forEach(function(button) {
+    button.addEventListener('change', function(e) {
+      const selectedCategory = e.target.value;
+      console.log("Selected category:", selectedCategory); // Debug log
+      updateMap(selectedCategory);
+    });
+  });
+}
 
+function updateMap(category) {
+  console.log("Updating map with category:", category);
+  selectedCat = category;
+  
   if (geojson) {
-    geojson.remove(); // pašalina seną sluoksnį
+    geojson.remove();
   }
 
   let style;
-  switch(selectedCat)
-  {
+  switch(category) {
     case 'population':
       style = (feature) => {
-        word=feature.properties.population;
         return {
           fillColor: getColorBigNumbers(feature.properties.population), 
           weight: 2,
@@ -654,10 +792,8 @@ function updateMap(selectedCat)
       break;
     case 'education':
       style = (feature) => {
-        
-        word = countEducationFacilities(feature);
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countEducationFacilities(feature)),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -669,10 +805,8 @@ function updateMap(selectedCat)
       break;
     case 'culture':
       style = (feature) => {
-        
-        word = countCultureFacilities(feature);
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countCultureFacilities(feature)),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -684,9 +818,8 @@ function updateMap(selectedCat)
       break;
     case 'kindergarten':
       style = (feature) => {
-        word = countFacilities(feature, 'education.kindergarten');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.kindergarten')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -696,11 +829,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'nurseryKindergarten':
+    case 'nurseryKindergarten':
       style = (feature) => {
-        word = countFacilities(feature, 'education.nurseryKindergarten');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.nurseryKindergarten')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -710,11 +842,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'primary':
+    case 'primary':
       style = (feature) => {
-        word = countFacilities(feature, 'education.primary');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.primary')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -726,9 +857,8 @@ function updateMap(selectedCat)
       break;
     case 'progymnasium':
       style = (feature) => {
-        word = countFacilities(feature, 'education.progymnasium');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.progymnasium')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -738,11 +868,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'preSchool':
+    case 'preSchool':
       style = (feature) => {
-        word = countFacilities(feature, 'education.preSchool');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.preSchool')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -752,11 +881,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'basicSchool':
+    case 'basicSchool':
       style = (feature) => {
-        word = countFacilities(feature, 'education.basicSchool');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.basicSchool')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -766,11 +894,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'schoolKindergarten':
+    case 'schoolKindergarten':
       style = (feature) => {
-        word = countFacilities(feature, 'education.schoolKindergarten');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.schoolKindergarten')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -780,11 +907,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'supportSchool':
+    case 'supportSchool':
       style = (feature) => {
-        word = countFacilities(feature, 'education.supportSchool');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.supportSchool')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -794,11 +920,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'sportSchool':
+    case 'sportSchool':
       style = (feature) => {
-        word = countFacilities(feature, 'education.sportSchool');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.sportSchool')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -808,11 +933,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-     case 'gymnasium':
+    case 'gymnasium':
       style = (feature) => {
-        word = countFacilities(feature, 'education.gymnasium');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.gymnasium')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -824,9 +948,8 @@ function updateMap(selectedCat)
       break;
     case 'artSchool':
       style = (feature) => {
-        word = countFacilities(feature, 'education.artSchool');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.artSchool')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -838,9 +961,8 @@ function updateMap(selectedCat)
       break;
     case 'vocationalSchool':
       style = (feature) => {
-        word = countFacilities(feature, 'education.vocationalSchool');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'education.vocationalSchool')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -852,9 +974,8 @@ function updateMap(selectedCat)
       break;
     case 'culturalCenter':
       style = (feature) => {
-        word = countFacilities(feature, 'culturalSector.culturalCenter');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'culturalSector.culturalCenter')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -866,9 +987,8 @@ function updateMap(selectedCat)
       break;
     case 'library':
       style = (feature) => {
-        word = countFacilities(feature, 'culturalSector.library');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'culturalSector.library')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -878,11 +998,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'medicine':
+    case 'medicine':
       style = (feature) => {
-        word=countMedicineFacilities(feature);
         return {
-          fillColor: getColorSmallNumbers(word), 
+          fillColor: getColorSmallNumbers(countMedicineFacilities(feature)),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -892,11 +1011,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'polyclinic':
+    case 'polyclinic':
       style = (feature) => {
-        word=countFacilities(feature, 'healthSector.polyclinic');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'healthSector.polyclinic')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -906,11 +1024,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'ambulatory':
+    case 'ambulatory':
       style = (feature) => {
-        word=countFacilities(feature, 'healthSector.ambulatory');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'healthSector.ambulatory')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -920,11 +1037,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'BpgOffice':
+    case 'BpgOffice':
       style = (feature) => {
-        word=countFacilities(feature, 'healthSector.BpgOffice');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'healthSector.BpgOffice')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -934,11 +1050,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'familyDoctor':
+    case 'familyDoctor':
       style = (feature) => {
-        word=countFacilities(feature, 'healthSector.familyDoctor');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'healthSector.familyDoctor')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -948,11 +1063,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'medicalStation':
+    case 'medicalStation':
       style = (feature) => {
-        word=countFacilities(feature, 'healthSector.medicalStation');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'healthSector.medicalStation')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -962,11 +1076,10 @@ function updateMap(selectedCat)
       };
       arGalima=1;
       break;
-      case 'LongTermCareAndNursingHospital':
+    case 'LongTermCareAndNursingHospital':
       style = (feature) => {
-        word=countFacilities(feature, 'healthSector.LongTermCareAndNursingHospital');
         return {
-          fillColor: getColorSmallNumbers(word),
+          fillColor: getColorSmallNumbers(countFacilities(feature, 'healthSector.LongTermCareAndNursingHospital')),
           weight: 2,
           opacity: 1,
           color: 'black',
@@ -998,44 +1111,191 @@ function updateMap(selectedCat)
     }
   ).addTo(map);
   
+  info.update();
 }
+//========================================================\\
 
-function setUpRadioButtonListeners() {
-  var radioButtons = document.querySelectorAll('input[name="obj_Amount"]');
-  
-  radioButtons.forEach(function(button) {
-    button.addEventListener('change', handleRadioButtonChange);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+let isDrawing = false;
+let currentLine = null;
+let latlngs = [];
+let allLines = []; 
+let currentColor = 'red'; 
+let lastPoint = null;
+const MIN_DISTANCE = 0.000001; 
+
+let firstDistancePoint = null;
+
+
+document.querySelectorAll('#drawBar div').forEach(colorDiv => {
+  colorDiv.addEventListener('click', function() {
+    currentColor = this.id; 
   });
-}
+});
 
-function handleRadioButtonChange(e) {
-  const selectedCategory = e.target.value; // gauti pasirinkta kategorija
-  updateMap(selectedCategory); // atnaujinti mapą pagal pasirinkta kategorija
-}
+function isDrawingFalse()
+    {
+        map.dragging.enable();
+    map.scrollWheelZoom.enable();
+    map.doubleClickZoom.enable();
+    map.boxZoom.enable();
+    map.keyboard.enable();
+    if (map.tap) map.tap.enable();
+    
+    // Remove all lines from the map
+    allLines.forEach(line => {
+      map.removeLayer(line);
+    });
+    allLines = []; // Clear 
+    currentLine = null;
+    latlngs.splice(0, latlngs.length);
+    lastPoint = null;
+    }
 
+document.getElementById('drawButton').onclick = () => {
+  isDrawing = !isDrawing;
+  document.getElementById('drawButton').innerText = isDrawing ? "Stop Drawing" : "Start Drawing";
+  document.getElementById('drawBar').style.display = isDrawing ? "block" : "none";
 
-setUpRadioButtonListeners();
-updateMap(); 
-
-var info = L.control({position: 'topleft'});
-
-info.onAdd = function (map) {
-  this._div = L.DomUtil.create('div', 'info'); // sukuria div su klasė "info"
-  this.update();
-  return this._div;
-};
-
-info.update = function (props, zodis) {
-  if (props) {
-      this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
-          '<b>' + props.name + '</b>' + (zodis ? '<br />' + zodis : '');
-  } else {
-      this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>';
+  if (isDrawing) 
+  {
+    // Disable 
+    map.dragging.disable();
+    map.scrollWheelZoom.disable();
+    map.doubleClickZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+    if (map.tap) map.tap.disable(); // telefonam
+    isDistance = false;
+    document.getElementById('distanceButton').innerText = "Start Measuring";
+    // Clear 
+    firstDistancePoint = null;
+    allLines.forEach(line => {
+      map.removeLayer(line);
+    });
+    allLines = [];
+    currentLine = null;
+  } 
+  else 
+  {
+    isDrawingFalse();
   }
 };
 
-info.addTo(map);
-// ======================================================
+document.getElementById('distanceButton').onclick = () => {
+  isDistance = !isDistance;
+  document.getElementById('distanceButton').innerText = isDistance ? "Stop Measuring" : "Start Measuring";
+
+  if (isDistance) {
+    isDrawing = false;
+    document.getElementById('drawButton').innerText = "Start Drawing";
+    document.getElementById('drawBar').style.display = "none";
+
+    map.dragging.disable();
+    map.scrollWheelZoom.disable();
+    map.doubleClickZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+    if (map.tap) map.tap.disable();
+    // Clear 
+    allLines.forEach(line => {
+      map.removeLayer(line);
+    });
+    allLines = [];
+    currentLine = null;
+    firstDistancePoint = null;
+  } else {
+    map.dragging.enable();
+    map.scrollWheelZoom.enable();
+    map.doubleClickZoom.enable();
+    map.boxZoom.enable();
+    map.keyboard.enable();
+    if (map.tap) map.tap.enable();
+    // Clear 
+    firstDistancePoint = null;
+    allLines.forEach(line => {
+      map.removeLayer(line);
+    });
+    allLines = [];
+    currentLine = null;
+  }
+};
+
+map.on('mousedown', function(e) {
+  if (isDrawing)
+  {
+    latlngs = [e.latlng];
+    lastPoint = e.latlng;
+    currentLine = L.polyline(latlngs, { 
+      color: currentColor,
+      weight: 3,
+      zIndexOffset: 100000000  
+    }).addTo(map);
+    currentLine.bringToFront(); 
+    allLines.push(currentLine);
+  
+    map.on('mousemove', onMouseMove);
+    map.once('mouseup', function() {
+      map.off('mousemove', onMouseMove);
+      lastPoint = null;
+    });
+  }
+  else if(isDistance){
+      // Matavimo logika
+    if (!firstDistancePoint) {
+      // pirmas taškas – saugom
+      firstDistancePoint = e.latlng;
+      
+      currentLine = L.polyline([firstDistancePoint], {
+        color: 'blue',
+        weight: 4,
+        dashArray: '5, 10'
+      }).addTo(map);
+      allLines.push(currentLine);
+    } else {
+      
+      const currentPoints = currentLine.getLatLngs();
+      currentPoints.push(e.latlng);
+      currentLine.setLatLngs(currentPoints);
+      
+
+      let totalDistance = 0;
+      for (let i = 1; i < currentPoints.length; i++) {
+        totalDistance += currentPoints[i-1].distanceTo(currentPoints[i]);
+      }
+      
+      info.update(totalDistance);
+    }
+  }
+
+});
+
+function onMouseMove(e) {
+  if (!lastPoint) return;
+  
+  // atstumas tarp dvieju tasku
+  const distance = Math.sqrt(
+    Math.pow(e.latlng.lat - lastPoint.lat, 2) + 
+    Math.pow(e.latlng.lng - lastPoint.lng, 2)
+  );
 
 
+  if (distance > MIN_DISTANCE) {
+    latlngs.push(e.latlng);
+    currentLine.setLatLngs(latlngs);
+    currentLine.bringToFront();
+    lastPoint = e.latlng;
+  }
+}
+//========================================================\\
+
+
+
+
+// Initialize the map with default style
+setUpRadioButtonListeners();
+updateMap('default'); // Start with default style
 
