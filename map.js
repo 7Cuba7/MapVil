@@ -29,9 +29,18 @@ info.update = function (props, value) {
       '<b>' + `Atstumas: ${(props / 1000).toFixed(2)} km` + '</b>';
     }
   else if (props) {
-    this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
-      '<b>' + props.name + '</b>' + 
-      (value !== undefined && value !== null ? '<br />' + value : '');
+    let html = '<h4>Vilniaus rajono seniūnijos</h4>' +
+      '<div style="text-align: center;"><b>' + props.name + '</b></div>';
+    
+    if (selectedCat === 'default' || !selectedCat) {
+      html += '<div style="text-align: center;" id="coatOfArmsContainer"><img src="\\img\\herbai\\' + props.name + '.png" alt="' + props.name + ' herbas" style="width: 150px; height: auto; margin: 10px 0;" onerror="this.parentElement.style.display=\'none\'"></div>';
+    }
+    
+    if (value !== undefined && value !== null) {
+      html +=  value;
+    }
+    
+    this._div.innerHTML = html;
   } 
   else {
     this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>';
@@ -46,20 +55,24 @@ L.geoJSON(seniunijos).addTo(map);
 let menuButton = document.querySelector('#button-menu img');
 let sidePop = document.getElementById('sideBar');
 
-function sideBarPopUp()
-{
-  sidePop.style.display='block';
+function toggleSideBar() {
+  if (sidePop.style.display === 'block') {
+    sidePop.style.display = 'none';
+  } else {
+    sidePop.style.display = 'block';
+  }
 }
 
-menuButton.addEventListener('click', sideBarPopUp);
+menuButton.addEventListener('click', toggleSideBar);
 
-let exitButton = document.querySelector('#sideBar img')
-function sideBarRemove()
-{
-  sidePop.style.display='none';
-}
-
-exitButton.addEventListener('click', sideBarRemove);
+document.addEventListener('DOMContentLoaded', function() {
+  let exitButton = document.querySelector('#sideBar img');
+  function sideBarRemove() {
+    sidePop.style.display = 'none';
+  }
+  
+  exitButton.addEventListener('click', sideBarRemove);
+});
 //========================================================================\\
 
 let schoolNum = document.getElementById('educationLocation');
@@ -1157,7 +1170,8 @@ function isDrawingFalse()
 
 document.getElementById('drawButton').onclick = () => {
   isDrawing = !isDrawing;
-  document.getElementById('drawButton').innerText = isDrawing ? "Stop Drawing" : "Start Drawing";
+  const drawButton = document.getElementById('drawButton');
+  drawButton.classList.toggle('active');
   document.getElementById('drawBar').style.display = isDrawing ? "block" : "none";
 
   if (isDrawing) 
@@ -1169,10 +1183,15 @@ document.getElementById('drawButton').onclick = () => {
     map.boxZoom.disable();
     map.keyboard.disable();
     if (map.tap) map.tap.disable(); // telefonam
+    
+    // Reset distance button state
     isDistance = false;
-    document.getElementById('distanceButton').innerText = "Start Measuring";
-    // Clear 
+    const distanceButton = document.getElementById('distanceButton');
+    distanceButton.classList.remove('active');
+    distanceButton.innerHTML = '<img src="\\img\\ruler.png" alt="Liniuotė">';
     firstDistancePoint = null;
+    
+    // Clear 
     allLines.forEach(line => {
       map.removeLayer(line);
     });
@@ -1187,11 +1206,16 @@ document.getElementById('drawButton').onclick = () => {
 
 document.getElementById('distanceButton').onclick = () => {
   isDistance = !isDistance;
-  document.getElementById('distanceButton').innerText = isDistance ? "Stop Measuring" : "Start Measuring";
+  const button = document.getElementById('distanceButton');
+  button.classList.toggle('active');
+  button.innerHTML = '<img src="\\img\\ruler.png" alt="Liniuotė">';
 
   if (isDistance) {
+    // Reset drawing button state
     isDrawing = false;
-    document.getElementById('drawButton').innerText = "Start Drawing";
+    const drawButton = document.getElementById('drawButton');
+    drawButton.classList.remove('active');
+    drawButton.innerHTML = '<img src="\\img\\pngegg.png" alt="Piešimas">';
     document.getElementById('drawBar').style.display = "none";
 
     map.dragging.disable();
