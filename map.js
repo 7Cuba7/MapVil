@@ -65,13 +65,6 @@ function toggleSideBar() {
 
 menuButton.addEventListener('click', toggleSideBar);
 
-document.addEventListener('DOMContentLoaded', function() {
-  let exitButton = document.querySelector('#sideBar img');
-  function sideBarRemove() {
-    sidePop.style.display = 'none';
-  }
-  
-  exitButton.addEventListener('click', sideBarRemove);
 });
 //========================================================================\\
 
