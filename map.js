@@ -65,7 +65,6 @@ function toggleSideBar() {
 
 menuButton.addEventListener('click', toggleSideBar);
 
-});
 //========================================================================\\
 
 let schoolNum = document.getElementById('educationLocation');
