@@ -20,17 +20,12 @@
     ></script>
   </head>
   <body>
-    <div id="logo">
-      <img src="herbas.svg.png" alt="Herbas" />
-    </div>
     <div id="top-toolbar">
       <div id="button-menu">
         <img src="icons8-menu.svg" alt="Menu" />
       </div>
       <div id="sideBar">
-        <img src="close-x-svgrepo-com.svg" alt="Exit" />
-        <br />
-        <br />
+        
         <hr style="margin: 10px 0; border: 1px solid #ccc;">
 
         <button id="add1">+</button>
@@ -159,20 +154,22 @@
         <button data-marker-location="vocationalSchool" id="vocationalSchoolLocation">🛠️</button>
         <br />
         <br />
-          <div id="languageSelection" style="display: flex; align-items: center; gap: 10px;">
-            <label>Mokomoji kalba: </label>
-
-            <div>
-                <button  data-language="LT">Lietuvių</button>
-                <button  data-language="PL">Lenkų</button>
-                <button  data-language="RU">Rusų</button>
+          <div id="languageSelection" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <label>Mokomoji kalba: </label>
+              <div>
+                <button data-language="LT">Lietuvių</button>
+                <button data-language="PL">Lenkų</button>
+                <button data-language="RU">Rusų</button>
+              </div>
             </div>
             
-            <!-- <label>Priklausomybė: </label> -->
-
-            <!-- <div>
-              <button  data-language="private">Privati</button>
-            </div> -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <label>Priklausomybė: </label> 
+              <div>
+                <button data-language="private">Privati</button>
+              </div> 
+            </div>
           </div>
         </div>
         
@@ -286,7 +283,22 @@
         <button id="clearButton">Pašalinti pasirinkimus</button>
       </div>
     </div>
+    <div id="drawButton">
+      <img src="\img\pngegg.png" alt="Piešimas">
+    </div>
+    <div id="distanceButton">
+      <img src="\img\ruler.png" alt="Liniuotė">
+    </div>
+    <div id="drawBar">
+      <div id="red"></div>
+      <div id="blue"></div>
+      <div id="green"></div>
+      <div id="black"></div>
+      <div id="yellow"></div>
+    </div>
     <div id="map"></div>
-    <script type="module" src="map.js"></script>
+     <script type="module" src="map.js"></script>
+
+
   </body>
 </html>
