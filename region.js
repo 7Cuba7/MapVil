@@ -7,6 +7,7 @@ export var seniunijos = {
       "properties": 
       {
         "name": "Pagirių seniūnija",
+        "name2": "Pagiriu_seniunija",
         "population": 7894, // 2025m.
         "education": { 
            "nurseryKindergarten": [
@@ -1895,6 +1896,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Avižienių seniūnija",
+        "name2": "Avizieniu_seniunija",
         "population": 18082,
         "education": {  
           "nurseryKindergarten": [
@@ -3082,6 +3084,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Bezdonių seniūnija",
+        "name2": "Bezdoniu_seniunija",
         "population": 1234,
         "education": {  
           "nurseryKindergarten": [
@@ -4247,6 +4250,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Buivydžių seniūnija",
+        "name2": "Buivydziu_seniunija",
         "population": 869,
         "education": {  
           "nurseryKindergarten": [],
@@ -6891,6 +6895,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Dūkštų seniūnija",
+        "name2": "Dukstu_seniunija",
         "population": 2350,
         "education": {  
           "nurseryKindergarten": [],
@@ -9360,6 +9365,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Juodšilių seniūnija",
+        "name2": "Juodsiliu_seniunija",
         "population": 1234,
         "education": {  
           "nurseryKindergarten": [
@@ -10072,6 +10078,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Kalvelių seniūnija",
+        "name2": "Kalveliu_seniunija",
         "population": 1234,
         "education": {  
           "nurseryKindergarten": [
@@ -16299,6 +16306,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Lavoriškių seniūnija",
+        "name2": "Lavoriskiu_seniunija",
         "population": 2253,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -17855,6 +17863,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Maišiagalos seniūnija",
+        "name2": "Maisiagalos_seniunija",
         "population": 3193,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -19389,6 +19398,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Marijampolio seniūnija",
+        "name2": "Marijampolio_seniunija",
         "population": 3867,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -21388,6 +21398,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Medininkų seniūnija",
+        "name2": "Medininku_seniunija",
         "population": 1063,  // 2025m.
         "education": {  
           "nurseryKindergarten": [],
@@ -23073,6 +23084,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Mickūnų seniūnija",
+        "name2": "Mickunu_seniunija",
         "population": 6956,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -24098,6 +24110,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Nemenčinės seniūnija",
+        "name2": "Nemencines_seniunija",
         "population": 4015,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -27944,6 +27957,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Nemenčinės m. seniūnija",
+        "name2": "Nemencines_m._seniunija",
         "population": 4641,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -29050,6 +29064,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Nemėžio seniūnija",
+        "name2": "Nemezio_seniunija",
         "population": 10476,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -29748,6 +29763,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Paberžės seniūnija",
+        "name2": "Paberzes_seniunija",
         "population": 3276,  // 2025m.
        "education": {  
           "nurseryKindergarten": [
@@ -32295,6 +32311,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Riešės seniūnija",
+        "name2": "Rieses_seniunija",
         "population": 8860,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -34777,6 +34794,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Rudaminos seniūnija",
+        "name2": "Rudaminos_seniunija",
         "population": 6608,  // 2025m.
         "education": {  
           "nurseryKindergarten": [
@@ -36253,6 +36271,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Rukainių seniūnija",
+        "name2": "Rukainiu_seniunija",
         "population": 2676, // 2025m.
         "education": {  
           "nurseryKindergarten": [],
@@ -37521,6 +37540,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Sudervės seniūnija",
+        "name2": "Suderves_seniunija",
         "population": 3496,  // 2025m.
         "education": {  
          "nurseryKindergarten": [],
@@ -39774,6 +39794,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Sužionių seniūnija",
+        "name2": "Suzioniu_seniunija",
         "population": 1662,  // 2025m.
         "education": {  
           "nurseryKindergarten": [],
@@ -44510,6 +44531,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Šatrininkų seniūnija",
+        "name2": "Satrininku_seniunija",
         "population": 3252,  // 2025m.
         "education": {  
          "nurseryKindergarten": [],
@@ -45451,6 +45473,7 @@ export var seniunijos = {
       "type": "Feature",
       "properties": {
         "name": "Zujūnų seniūnija",
+        "name2": "Zujunu_seniunija",
         "population": 9475,  // 2025m.
         "education": {  
           "nurseryKindergarten": [],
