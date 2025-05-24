@@ -32,7 +32,7 @@ info.update = function (props, value) {
       '<div style="text-align: center;"><b>' + props.name + '</b></div>';
     
     if (selectedCat === 'default' || !selectedCat) {
-      html += '<div style="text-align: center;" id="coatOfArmsContainer"><img src="herbai/' + props.name + '.png" alt="' + props.name + ' herbas" style="width: 150px; height: auto; margin: 10px 0;" onerror="this.parentElement.style.display=\'none\'"></div>';
+      html += '<div style="text-align: center;" id="coatOfArmsContainer"><img src="herbai/' + props.name2 + '.png" alt="' + props.name2 + ' herbas" style="width: 150px; height: auto; margin: 10px 0;" onerror="this.parentElement.style.display=\'none\'"></div>';
     }
     
     if (value !== undefined && value !== null) {
