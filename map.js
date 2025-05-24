@@ -32,7 +32,7 @@ info.update = function (props, value) {
       '<div style="text-align: center;"><b>' + props.name + '</b></div>';
     
     if (selectedCat === 'default' || !selectedCat) {
-      html += '<div style="text-align: center;" id="coatOfArmsContainer"><img src="herbai\\' + props.name + '.png" alt="' + props.name + ' herbas" style="width: 150px; height: auto; margin: 10px 0;" onerror="this.parentElement.style.display=\'none\'"></div>';
+      html += '<div style="text-align: center;" id="coatOfArmsContainer"><img src="herbai/' + props.name + '.png" alt="' + props.name + ' herbas" style="width: 150px; height: auto; margin: 10px 0;" onerror="this.parentElement.style.display=\'none\'"></div>';
     }
     
     if (value !== undefined && value !== null) {
@@ -42,8 +42,8 @@ info.update = function (props, value) {
     this._div.innerHTML = html;
   } 
   else {
-    this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
-      '<div style="text-align: center;" id="coatOfArmsContainer"><img src="herbai\\VilniausRSHerbas.png" alt="Vilniaus rajono herbas" style="width: 80px; height: auto; margin: 10px 0;"></div>';
+   this._div.innerHTML = '<h4>Vilniaus rajono seniūnijos</h4>' +
+  '<div style="text-align: center;" id="coatOfArmsContainer"><img src="herbai/VilniausRSHerbas.png" alt="Vilniaus rajono herbas" style="width: 80px; height: auto; margin: 10px 0;"></div>';
   }
 };
 
