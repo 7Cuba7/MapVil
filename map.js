@@ -1284,7 +1284,7 @@ document.getElementById('drawButton').onclick = () => {
     isDistance = false;
     const distanceButton = document.getElementById('distanceButton');
     distanceButton.classList.remove('active');
-    distanceButton.innerHTML = '<img src="\\img\\ruler.png" alt="Liniuotė">';
+    distanceButton.innerHTML = '<img src="ruler.png" alt="Liniuotė">';
     firstDistancePoint = null;
     
     // Clear 
@@ -1304,14 +1304,14 @@ document.getElementById('distanceButton').onclick = () => {
   isDistance = !isDistance;
   const button = document.getElementById('distanceButton');
   button.classList.toggle('active');
-  button.innerHTML = '<img src="\\img\\ruler.png" alt="Liniuotė">';
+  button.innerHTML = '<img src="ruler.png" alt="Liniuotė">';
 
   if (isDistance) {
     // Reset drawing button state
     isDrawing = false;
     const drawButton = document.getElementById('drawButton');
     drawButton.classList.remove('active');
-    drawButton.innerHTML = '<img src="\\img\\pngegg.png" alt="Piešimas">';
+    drawButton.innerHTML = '<img src="pngegg.png" alt="Piešimas">';
     document.getElementById('drawBar').style.display = "none";
 
     map.dragging.disable();
